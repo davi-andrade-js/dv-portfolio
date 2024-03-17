@@ -6,15 +6,13 @@ export default function Home() {
     <>
       <div className="noise"></div>
 
-      {/* <div className="absolute">
-        <div className="absolute inset-0 justify-center">
+      <main className="flex h-[89vh] flex-col p-10 m-10 ">
+        <div className="absolute justify-center">
           <div className="bg-shape1 bg-teal opacity-50 bg-blur"></div>
           <div className="bg-shape2 bg-primary opacity-50 bg-blur"></div>
-          <div className="bg-shape1 bg-purple opacity-50 bg-blur"></div>
+          {/* <div className="bg-shape1 bg-purple opacity-50 bg-blur"></div> */}
         </div>
-      </div> */}
 
-      <main className="flex h-[89vh] flex-col p-10 m-10 glassmorphism">
         <div className="flex space-between">
           <div className="z-10 w-full flex-start flex-col font-mono text-sm lg:flex">
             <p className="fixed left-0 top-0 flex lg:static lg:w-auto text-2xl">Davi Andrade</p>
