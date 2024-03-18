@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -20,16 +23,16 @@
   }
 } */
 
-body {
-  /* color: rgb(var(--foreground-rgb));
+/* body {
+   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
-    rgb(var(--background-start-rgb)); */
-  /* background-repeat: no-repeat;
-  background-attachment: fixed; */
-}
+    rgb(var(--background-start-rgb)); 
+   background-repeat: no-repeat;
+  background-attachment: fixed; 
+} */
 
 main {
-  background-color: #fbfbfb;
+  background-color: white;
   /* background-image: radial-gradient(at 47% 33%, hsl(282.71, 100%, 65%) 0, transparent 59%),
     radial-gradient(at 82% 65%, hsl(194.86, 88%, 50%) 0, transparent 55%); */
   /* backdrop-filter: blur(16px) saturate(180%);
@@ -72,19 +75,19 @@ main {
 }
 
 .bg-shape1 {
-  width: 600px;
-  height: 600px;
+  width: 800px;
+  height: 800px;
   border-radius: 9999px;
   position: relative;
   animation: one 8s infinite linear;
 }
 
 .bg-shape2 {
-  width: 550px;
-  height: 550px;
+  width: 800px;
+  height: 800px;
   border-radius: 9999px;
   position: relative;
-  animation: two 4s infinite linear;
+  animation: two 12s infinite linear;
 }
 
 @keyframes one {
@@ -139,41 +142,77 @@ main {
     left: 300px;
     top: -150px;
   }
-  10% {
+  5% {
     left: 300px;
-    top: 350px;
+    top: 200px;
+  }
+  10% {
+    left: -200px;
+    top: 250px;
+  }
+  15% {
+    left: -900px;
+    top: 250px;
   }
   20% {
-    left: -300px;
-    top: 350px;
+    left: -900px;
+    top: -150px;
+  }
+  25% {
+    left: -400px;
+    top: -150px;
   }
   30% {
-    left: -900px;
-    top: 350px;
+    left: 100px;
+    top: 250px;
+  }
+  35% {
+    left: 300px;
+    top: 250px;
   }
   40% {
-    left: -900px;
+    left: 300px;
+    top: -150px;
+  }
+  45% {
+    left: -300px;
     top: -150px;
   }
   50% {
-    left: -500px;
-    top: 350px;
+    left: -900px;
+    top: -150px;
+  }
+  55% {
+    left: -900px;
+    top: 250px;
   }
   60% {
-    left: 0px;
-    top: 350px;
+    left: -400px;
+    top: 250px;
+  }
+  65% {
+    left: 100px;
+    top: 0px;
   }
   70% {
-    left: 300px;
-    top: 350px;
+    left: -300px;
+    top: -150px;
+  }
+  75% {
+    left: -900px;
+    top: -150px;
   }
   80% {
-    left: -100px;
-    top: -150px;
+    left: -900px;
+    top: 250px;
+  }
+  85% {
+    left: -300px;
+    top: 250px;
   }
   90% {
-    left: -500px;
-    top: -150px;
+    left: 300px;
+    top: 250px;
   }
   100% {
     left: 300px;
