@@ -31,30 +31,16 @@
   background-attachment: fixed; 
 } */
 
-main {
-  background-color: white;
-  /* background-image: radial-gradient(at 47% 33%, hsl(282.71, 100%, 65%) 0, transparent 59%),
-    radial-gradient(at 82% 65%, hsl(194.86, 88%, 50%) 0, transparent 55%); */
-  /* backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%); */
-  border-radius: 12px;
-  /* border: 1px solid rgba(209, 213, 219, 0.3); */
-}
-
 .motion-area {
-  border-radius: 12px;
+  /* border-radius: 12px; */
   overflow: hidden;
   position: absolute;
-  margin: 40px !important;
+  margin: 44px !important;
   height: 89vh;
   inset: 0;
   justify-content: center;
   display: inline-flex;
   flex-direction: row;
-}
-
-.opacity-50 {
-  opacity: 0.5;
 }
 
 .bg-blur {
