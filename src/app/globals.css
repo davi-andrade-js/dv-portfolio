@@ -41,7 +41,7 @@ main {
   /* border: 1px solid rgba(209, 213, 219, 0.3); */
 }
 
-.absolute {
+.motion-area {
   border-radius: 12px;
   overflow: hidden;
   position: absolute;
@@ -90,10 +90,11 @@ main {
   animation: two 12s infinite linear;
 }
 
+/* TODO: tornar responsivo e em tailwind */
 @keyframes one {
   0% {
     left: -350px;
-    top: -150px;
+    top: -300px;
   }
   10% {
     left: -350px;
@@ -104,20 +105,20 @@ main {
     top: 350px;
   }
   30% {
-    left: 800px;
+    left: 1000px;
     top: 350px;
   }
   40% {
-    left: 800px;
-    top: -100px;
+    left: 1000px;
+    top: -300px;
   }
   50% {
     left: 300px;
-    top: -100px;
+    top: -300px;
   }
   60% {
     left: -350px;
-    top: -100px;
+    top: -300px;
   }
   70% {
     left: 0px;
@@ -133,14 +134,14 @@ main {
   }
   100% {
     left: -350px;
-    top: -150px;
+    top: -300px;
   }
 }
 
 @keyframes two {
   0% {
     left: 300px;
-    top: -150px;
+    top: -350px;
   }
   5% {
     left: 300px;
@@ -151,16 +152,16 @@ main {
     top: 250px;
   }
   15% {
-    left: -900px;
+    left: -1000px;
     top: 250px;
   }
   20% {
-    left: -900px;
-    top: -150px;
+    left: -1000px;
+    top: -350px;
   }
   25% {
     left: -400px;
-    top: -150px;
+    top: -350px;
   }
   30% {
     left: 100px;
@@ -172,18 +173,18 @@ main {
   }
   40% {
     left: 300px;
-    top: -150px;
+    top: -350px;
   }
   45% {
     left: -300px;
-    top: -150px;
+    top: -350px;
   }
   50% {
-    left: -900px;
-    top: -150px;
+    left: -1000px;
+    top: -350px;
   }
   55% {
-    left: -900px;
+    left: -1000px;
     top: 250px;
   }
   60% {
@@ -196,14 +197,14 @@ main {
   }
   70% {
     left: -300px;
-    top: -150px;
+    top: -350px;
   }
   75% {
-    left: -900px;
-    top: -150px;
+    left: -1000px;
+    top: -350px;
   }
   80% {
-    left: -900px;
+    left: -1000px;
     top: 250px;
   }
   85% {
@@ -216,7 +217,7 @@ main {
   }
   100% {
     left: 300px;
-    top: -150px;
+    top: -350px;
   }
 }
 
