@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import Sidebar from "../../components/Sidebar";
-import ProjectsList from "../../components/ProjectsList";
+import Sidebar from "./components/Sidebar";
+import ProjectsList from "./components/ProjectsList";
 
 export default function Home() {
   return (
     <>
       <div className="noise"></div>
 
-      <section className="border border-gray-500 br-[12px bg-white br-[12px] grid grid-cols-4 grid-rows-4 h-[89vh] p-5 m-11 ">
+      <section className=" br-[12px bg-white br-[12px] grid grid-cols-4 grid-rows-5 h-[89vh] p-5 m-11 ">
         <div className="motion-area justify-center">
           <div className="bg-shape1 bg-teal opacity-50 bg-blur"></div>
           <div className="bg-shape2 bg-primary opacity-50 bg-blur"></div>
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border border-gray-500 br-[12px] grid grid-cols-4 grid-rows-4 h-[89vh] p-5 m-11 ">
+      <section className="border border-gray-500 br-[12px] grid grid-cols-4 grid-rows-5 h-[89vh] p-5 m-11 ">
         <header className="grid justify-between w-full col-start-1 row-start-1 col-end-5 row-end-2">
           <div className="z-10 flex flex-col font-mono text-sm">
             <p className=" left-0 top-0 lg:static lg:w-auto text-2xl">DV</p>
