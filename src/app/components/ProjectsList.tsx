@@ -47,8 +47,8 @@ export default function ProjectsList() {
   // TODO: fazer a condicional do projeto em hover
 
   return (
-    <div className="flex flex-col w-fit h-fit justify-end items-end">
-      <div className="w-36 h-40 flex flex-col items-end">
+    <div className="flex flex-col max-w-52 h-fit justify-end items-end">
+      <div className="w-80 h-44 flex flex-col items-end">
         {projectOnHover !== "" ? (
           <Image
             key={projectOnHover}
