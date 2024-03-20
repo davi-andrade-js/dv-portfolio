@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <div className="noise"></div>
 
-      <section className=" br-[12px bg-white br-[12px] grid grid-cols-4 grid-rows-5 h-[89vh] p-5 m-11 ">
+      <section className="border bg-white br-[12px] grid grid-cols-4 grid-rows-5 h-[89vh] p-5 m-11 ">
         <div className="motion-area justify-center">
           <div className="bg-shape1 bg-teal opacity-50 bg-blur"></div>
           <div className="bg-shape2 bg-primary opacity-50 bg-blur"></div>
