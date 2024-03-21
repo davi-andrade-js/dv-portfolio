@@ -1,15 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Sidebar from "./components/Sidebar";
-import ProjectsList from "./components/ProjectsList";
-import ScrollToDiscover from "./components/ScrollToDiscover";
+import "./globals.css";
 
 export default function Home() {
   return (
     <>
       <div className="noise"></div>
 
-      <section className="border bg-white br-[12px] h-[89vh] p-5 m-11 ">
+      <section className="z-10 border border-stone-900 bg-white h-[91vh] p-5 m-8 ">
         <div className="motion-area justify-center">
           <div className="bg-shape1 bg-teal opacity-50 bg-blur"></div>
           <div className="bg-shape2 bg-primary opacity-50 bg-blur"></div>
@@ -21,12 +20,12 @@ export default function Home() {
             <p className=" left-0 top-0  lg:static lg:w-auto text-xl">Programador FrontEnd</p>
           </div>
           <div className="z-10 w-30">
-            <Image width={60} height={600} alt="Theme" src={"/dark.png"} />
+            <Image width={50} height={50} alt="Theme" src={"/dark.png"} />
           </div>
         </header>
 
         <main className="flex flex-row justify-between mt-20">
-          <Sidebar />
+          <Sidebar activeSection={"home"} />
 
           {/* TODO switch div with article */}
           <div className="z-[80] justify-end">
@@ -38,28 +37,6 @@ export default function Home() {
               </p>
             </article>
           </div>
-        </main>
-
-        <footer className="z-10 mt-16">
-          <ScrollToDiscover />
-        </footer>
-      </section>
-
-      <section className="border border-gray-500 br-[12px] h-[89vh] p-5 m-11 ">
-        <header className="flex flex-row justify-between w-full ">
-          <div className="z-10 flex flex-col font-mono text-sm">
-            <p className=" left-0 top-0 lg:static lg:w-auto text-2xl">DV</p>
-            {/* <p className=" left-0 top-0  lg:static lg:w-auto text-xl"></p> */}
-          </div>
-          <div className="z-10 w-30">
-            <Image width={60} height={600} alt="Theme" src={"/dark.png"} />
-          </div>
-        </header>
-
-        <main className="flex flex-row justify-between mt-20">
-          <Sidebar />
-
-          <ProjectsList />
         </main>
       </section>
     </>

@@ -48,6 +48,19 @@ export default function ProjectsList() {
 
   return (
     <div className="flex flex-col max-w-52 h-fit justify-end items-end">
+      <article className="z-10 text-2xl text-nowrap w-fit flex flex-col gap-5 items-end">
+        {projects.map((project) => (
+          <p
+            key={project.name}
+            className="cursor-pointer hover:text-stone-400 transition"
+            onMouseEnter={() => setProjectOnHover(project.screenshot)}
+            onMouseLeave={() => setProjectOnHover("")}
+          >
+            {project.name}
+          </p>
+        ))}
+      </article>
+
       <div className="w-80 h-44 flex flex-col items-end">
         {projectOnHover !== "" ? (
           <Image
@@ -58,23 +71,10 @@ export default function ProjectsList() {
             height={300}
           />
         ) : (
-          <p></p>
+          <></>
         )}
         {/* <Image key={projectOnHover} src={projectOnHover} alt={"screenshot"} /> */}
       </div>
-
-      <article className="z-10 text-xl w-fit flex flex-col gap-4 items-end">
-        {projects.map((project) => (
-          <p
-            key={project.name}
-            className="cursor-pointer hover:text-stone-400"
-            onMouseEnter={() => setProjectOnHover(project.screenshot)}
-            onMouseLeave={() => setProjectOnHover("")}
-          >
-            {project.name}
-          </p>
-        ))}
-      </article>
     </div>
   );
 }

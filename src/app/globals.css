@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Coves Light";
+  src: url("/fonts/Coves-Light.otf");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Coves Light", sans-serif; */
 }
 
 /* :root {
@@ -35,8 +40,8 @@
   /* border-radius: 12px; */
   overflow: hidden;
   position: absolute;
-  margin: 44px !important;
-  height: 89vh;
+  margin: 32px !important;
+  height: 91vh;
   inset: 0;
   justify-content: center;
   display: inline-flex;
@@ -44,7 +49,7 @@
 }
 
 .bg-blur {
-  filter: blur(90px);
+  filter: blur(100px);
 }
 
 .noise::before {
@@ -54,7 +59,7 @@
   width: 100vw;
   height: 100vh;
   content: "";
-  opacity: 0.03;
+  opacity: 0.04;
   z-index: 1000;
   pointer-events: none;
   background: url(/noise.gif);
@@ -73,38 +78,38 @@
   height: 800px;
   border-radius: 9999px;
   position: relative;
-  animation: two 12s infinite linear;
+  animation: two 15s infinite linear;
 }
 
 /* TODO: tornar responsivo e em tailwind */
 @keyframes one {
   0% {
     left: -350px;
-    top: -300px;
+    top: -400px;
   }
   10% {
     left: -350px;
-    top: 350px;
+    top: 300px;
   }
   20% {
     left: 200px;
-    top: 350px;
+    top: 300px;
   }
   30% {
     left: 1000px;
-    top: 350px;
+    top: 300px;
   }
   40% {
     left: 1000px;
-    top: -300px;
+    top: -400px;
   }
   50% {
     left: 300px;
-    top: -300px;
+    top: -400px;
   }
   60% {
     left: -350px;
-    top: -300px;
+    top: -400px;
   }
   70% {
     left: 0px;
@@ -120,7 +125,7 @@
   }
   100% {
     left: -350px;
-    top: -300px;
+    top: -400px;
   }
 }
 
