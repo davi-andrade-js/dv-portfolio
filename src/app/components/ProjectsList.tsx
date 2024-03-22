@@ -47,8 +47,8 @@ export default function ProjectsList() {
   // TODO: fazer a condicional do projeto em hover
 
   return (
-    <div className="flex flex-col max-w-52 h-fit justify-end items-end">
-      <article className="z-10 text-2xl text-nowrap w-fit flex flex-col gap-5 items-end">
+    <div className="flex flex-col max-w-52 h-fit justify-end items-end font-covesLight">
+      <article className="z-10 text-3xl text-nowrap w-fit flex flex-col gap-5 items-end">
         {projects.map((project) => (
           <p
             key={project.name}

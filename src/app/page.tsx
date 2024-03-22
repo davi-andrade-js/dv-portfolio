@@ -14,25 +14,25 @@ export default function Home() {
           <div className="bg-shape2 bg-primary opacity-50 bg-blur"></div>
         </div>
 
-        <header className="flex flex-row justify-between w-full">
-          <div className="z-10 flex flex-col font-mono text-sm">
-            <p className=" left-0 top-0 lg:static lg:w-auto text-2xl w-fit">Davi Andrade</p>
-            <p className=" left-0 top-0  lg:static lg:w-auto text-xl">Programador FrontEnd</p>
+        <header className="flex flex-row justify-between w-full h-24">
+          <div className="z-10 flex flex-col font-covesLight">
+            <p className=" left-0 top-0 lg:static lg:w-auto text-6xl w-fit">Davi Andrade</p>
+            <p className=" left-0 top-0  lg:static lg:w-auto text-2xl">Programador FrontEnd</p>
           </div>
           <div className="z-10 w-30">
             <Image width={50} height={50} alt="Theme" src={"/dark.png"} />
           </div>
         </header>
 
-        <main className="flex flex-row justify-between mt-20">
+        <main className="mt-11 flex flex-row justify-between">
           <Sidebar activeSection={"home"} />
 
           {/* TODO switch div with article */}
           <div className="z-[80] justify-end">
-            <article className="z-10 font-mono text-[15px]">
-              <p className="z-10 w-[150px]">
+            <article className="z-10 font-mono text-[16px]">
+              <p className="z-10 w-[150px] font-Helvetica">
                 {
-                  "Graduando em Análise e Desenvolvimento de Sistemas e, além da faculdade, estudo programação online para aprimorar continuamente minhas habilidades. Antes do meu primeiro 'Hello World', fiz trabalhos voluntários e estive à frente do protagonismo estudantil no ensino médio."
+                  "Graduando em Análise e Desenvolvimento de Sistemas e, além da faculdade, trabalho e estudo com programação Web. Antes do meu primeiro 'Hello World', fiz trabalhos voluntários e estive à frente do protagonismo estudantil no ensino médio."
                 }
               </p>
             </article>

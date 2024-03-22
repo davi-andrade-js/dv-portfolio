@@ -1,5 +1,5 @@
-import ProjectsList from "../components/ProjectsList";
-import Sidebar from "../components/Sidebar";
+import ProjectsList from "../../components/ProjectsList";
+import Sidebar from "../../components/Sidebar";
 import Image from "next/image";
 
 export default function Projects() {
@@ -8,9 +8,9 @@ export default function Projects() {
       <div className="noise"></div>
 
       <section className="border border-gray-500 br-[12px] h-[91vh] p-5 m-8 ">
-        <header className="flex flex-row justify-between w-full ">
-          <div className="z-10 flex flex-col font-mono text-sm">
-            <p className=" left-0 top-0 lg:static lg:w-auto text-2xl">DV</p>
+        <header className="flex flex-row justify-between w-full h-24 font-covesBold">
+          <div className="z-10 flex flex-col text-sm">
+            <p className=" left-0 top-0 lg:static lg:w-auto text-4xl">DV</p>
             {/* <p className=" left-0 top-0  lg:static lg:w-auto text-xl"></p> */}
           </div>
           <div className="z-10 w-30">
@@ -18,7 +18,7 @@ export default function Projects() {
           </div>
         </header>
 
-        <main className="flex flex-row justify-between mt-20">
+        <main className="mt-11 flex flex-row justify-between">
           <Sidebar activeSection={"projects"} />
 
           <ProjectsList />

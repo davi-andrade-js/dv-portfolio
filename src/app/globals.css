@@ -7,6 +7,23 @@
   src: url("/fonts/Coves-Light.otf");
 }
 
+@font-face {
+  font-family: "Coves Bold";
+  src: url("/fonts/Coves-Bold.otf");
+}
+
+.font-helvetica {
+  font-family: "Helvetica";
+}
+
+.font-covesLight {
+  font-family: "Coves Light", sans-serif;
+}
+
+.font-covesBold {
+  font-family: "Coves Bold", sans-serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -59,7 +76,7 @@
   width: 100vw;
   height: 100vh;
   content: "";
-  opacity: 0.04;
+  opacity: 0.03;
   z-index: 1000;
   pointer-events: none;
   background: url(/noise.gif);
