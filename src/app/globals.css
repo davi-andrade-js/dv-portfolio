@@ -12,8 +12,22 @@
   src: url("/fonts/Coves-Bold.otf");
 }
 
-.font-helvetica {
-  font-family: "Helvetica";
+@font-face {
+  font-family: "Poppins Regular";
+  src: url("/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Light";
+  src: url(/fonts/Poppins-Light.ttf);
+}
+
+.font-poppinsRegular {
+  font-family: "Poppins Regular";
+}
+
+.font-poppinsLight {
+  font-family: "Poppins Light";
 }
 
 .font-covesLight {

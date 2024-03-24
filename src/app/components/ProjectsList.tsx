@@ -8,7 +8,8 @@ export default function ProjectsList() {
 
   const projects = [
     {
-      name: "Davi Andrade",
+      name: "Lorem ipsum",
+      info: "portfólio pessoal",
       description: "Showcasing my most brilliant projects.",
       screenshot: "/portfolio.png",
       repositoryUrl: "",
@@ -16,6 +17,7 @@ export default function ProjectsList() {
     },
     {
       name: "Player de Música Retrô",
+      info: "web app com visual retrô",
       description: "Um player de música inspirado no visual do Windows 95.",
       screenshot: "/retro-music-player.png",
       repositoryUrl: "https://github.com/davi-andrade-js/Retro-Music-Player",
@@ -23,6 +25,7 @@ export default function ProjectsList() {
     },
     {
       name: "Thinker AI",
+      info: "ferramentas de IA",
       description: "Ferramenta de IA com geração de textos, imagens, vídeos, áudio e código.",
       screenshot: "/thinker.png",
       repositoryUrl: "https://github.com/davi-andrade-js/Thinker-AI",
@@ -30,6 +33,7 @@ export default function ProjectsList() {
     },
     {
       name: "Calc.js",
+      info: "calculadora",
       description: "Calculadora feita com JavaScript para praticar lógica e estilização.",
       screenshot: "/calc.png",
       repositoryUrl: "https://github.com/davi-andrade-js/Calc.js",
@@ -37,6 +41,7 @@ export default function ProjectsList() {
     },
     {
       name: "Weather App",
+      info: "app de clima",
       description: "Aplicação de clima feita com React e OpenWeatherAPI.",
       screenshot: "/weather.png",
       repositoryUrl: "",
@@ -44,37 +49,48 @@ export default function ProjectsList() {
     },
   ];
 
-  // TODO: fazer a condicional do projeto em hover
-
   return (
-    <div className="flex flex-col max-w-52 h-fit justify-end items-end font-covesLight">
-      <article className="z-10 text-3xl text-nowrap w-fit flex flex-col gap-5 items-end">
-        {projects.map((project) => (
-          <p
-            key={project.name}
-            className="cursor-pointer hover:text-stone-400 transition"
-            onMouseEnter={() => setProjectOnHover(project.screenshot)}
-            onMouseLeave={() => setProjectOnHover("")}
-          >
-            {project.name}
-          </p>
-        ))}
-      </article>
-
-      <div className="w-80 h-44 flex flex-col items-end">
+    <div className="flex flex-row h-fit justify-end space-x-4">
+      <div className="w-auto">
         {projectOnHover !== "" ? (
           <Image
             key={projectOnHover}
             src={projectOnHover}
             alt={"screenshot"}
-            width={300}
-            height={300}
+            width={600}
+            height={100}
           />
         ) : (
           <></>
         )}
         {/* <Image key={projectOnHover} src={projectOnHover} alt={"screenshot"} /> */}
       </div>
+
+      <article className="z-10 text-nowrap flex flex-col items-end">
+        {projects.map((project) => (
+          <>
+            {projects.indexOf(project) !== 0 ? (
+              <div className={"border-t-2 border-t-stone-900 w-full"}></div>
+            ) : (
+              <></>
+            )}
+
+            <div className="flex flex-row space-x-3 w-full items-center justify-between pt-4 pb-4">
+              <p key={project.info} className="text-sm font-poppinsRegular">
+                {project.info}
+              </p>
+              <p
+                key={project.name}
+                className="cursor-pointer hover:text-stone-400 transition text-3xl font-covesLight"
+                onMouseEnter={() => setProjectOnHover(project.screenshot)}
+                onMouseLeave={() => setProjectOnHover(project.screenshot)}
+              >
+                {project.name}
+              </p>
+            </div>
+          </>
+        ))}
+      </article>
     </div>
   );
 }
