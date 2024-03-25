@@ -10,8 +10,8 @@ export default function ProjectsList() {
 
   const projects = [
     {
-      name: "Lorem ipsum",
-      info: "portfólio pessoal",
+      name: "Davi Andrade",
+      info: "portfólio",
       description: "Showcasing my most brilliant projects.",
       screenshot: "/portfolio.png",
       repositoryUrl: "",
@@ -52,13 +52,16 @@ export default function ProjectsList() {
   ];
 
   return (
-    <div className="flex flex-row h-fit lg:justify-end md:space-x-4 lg:space-x-4 lg:items-end">
-      <div className="hidden md:block lg:block w-auto">
+    <div className="flex flex-row h-fit lg:justify-end md:space-x-4 lg:space-x-4 lg:items-end ">
+      <div
+        className={`hidden md:block lg:block w-auto transition-opacity duration-300 ${projectOnHover !== "" ? "opacity-100" : "opacity-0"}`}
+      >
         {projectOnHover !== "" ? (
           <Image
             key={projectOnHover}
             src={projectOnHover}
             alt={"screenshot"}
+            loading="lazy"
             width={600}
             height={100}
           />
@@ -67,7 +70,7 @@ export default function ProjectsList() {
         )}
       </div>
 
-      <article className="z-10 w-full md:w-fit text-nowrap flex flex-col items-end">
+      <div className="z-10 w-full md:w-fit text-nowrap flex flex-col items-end">
         {projects.map((project) => (
           <>
             {projects.indexOf(project) !== 0 ? (
@@ -76,23 +79,24 @@ export default function ProjectsList() {
               <></>
             )}
 
-            <div className="flex flex-row w-full items-center justify-between py-3 sm:py-4 lg:py-4">
+            <div
+              className="flex flex-row hover:text-stone-400 transition duration-300 w-full items-center justify-between md:space-x-6 py-3 sm:py-4 lg:py-4"
+              onMouseEnter={() => setProjectOnHover(project.screenshot)}
+              onMouseLeave={() => setProjectOnHover("")}
+            >
               <p key={project.info} className="text-xs md:text-sm lg:text-sm font-poppinsRegular">
                 {project.info}
               </p>
-
               <p
                 key={project.name}
-                className="cursor-pointer hover:text-stone-400 transition text-md md:text-3xl lg:text-3xl font-covesLight"
-                onMouseEnter={() => setProjectOnHover(project.screenshot)}
-                onMouseLeave={() => setProjectOnHover(project.screenshot)}
+                className="cursor-pointer text-md md:text-3xl lg:text-3xl font-covesLight"
               >
                 {project.name}
               </p>
             </div>
           </>
         ))}
-      </article>
+      </div>
     </div>
   );
 }

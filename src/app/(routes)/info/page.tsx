@@ -7,10 +7,9 @@ export default function Info() {
       <main className=" flex flex-row justify-between">
         <Sidebar activeSection={"info"} />
 
-        <div className="flex flex-col w-[150px] text-[16px] font-mono font-Helvetica h-fit justify-end items-end">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <p>TypeScript, React, Next.js, TailwindCSS, Shadcn/ui, Git and PNPM.</p>
-          <p>Postman, PostgreSQL and Rest APIs.</p>
+        <div className="flex flex-col w-40 text-base font-poppinsRegular h-fit justify-end items-end space-y-2">
+          <p>Experiência com TypeScript, React, Next.js, TailwindCSS, Shadcn/ui, Git e PNPM.</p>
+          <p>Noções básicas de BackEnd com Postman, PostgreSQL e Rest APIs.</p>
         </div>
       </main>
     </>

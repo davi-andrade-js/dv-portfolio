@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={"bg-zinc-200 " + inter.className}>
         <div className="noise"></div>
         <section className="flex flex-col z-10 border border-stone-900 h-[91vh] p-2 md:p-5 lg:p-5 m-5 md:m-8 lg:m-8">
           <Header />

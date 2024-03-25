@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="flex flex-row justify-between w-full font-covesLight mb-8">
-      <div className="z-10 flex flex-col h-fit">
-        <p className=" left-0 top-0 text-3xl md:text-6xl lg:text-6xl">Davi Andrade</p>
-        <p className=" left-0 top-0 text-lg md:text-2xl lg:text-2xl">Programador FrontEnd</p>
+      <div className="z-10 flex flex-col h-fit cursor-default">
+        <p className=" text-3xl md:text-6xl lg:text-6xl">Davi Andrade</p>
+        <p className=" text-md md:text-2xl lg:text-2xl">Desenvolvedor FrontEnd</p>
       </div>
 
       <div className="z-10">
