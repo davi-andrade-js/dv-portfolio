@@ -71,8 +71,7 @@
   /* border-radius: 12px; */
   overflow: hidden;
   position: absolute;
-  margin: 32px !important;
-  height: 91vh;
+  /* margin: 32px !important; */
   inset: 0;
   justify-content: center;
   display: inline-flex;
