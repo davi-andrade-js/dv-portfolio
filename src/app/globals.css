@@ -2,6 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Coves Light";
+  src: url("/fonts/Coves-Light.otf");
+}
+
+@font-face {
+  font-family: "Coves Bold";
+  src: url("/fonts/Coves-Bold.otf");
+}
+
+@font-face {
+  font-family: "Poppins Regular";
+  src: url("/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Light";
+  src: url(/fonts/Poppins-Light.ttf);
+}
+
+.font-poppinsRegular {
+  font-family: "Poppins Regular";
+}
+
+.font-poppinsLight {
+  font-family: "Poppins Light";
+}
+
+.font-covesLight {
+  font-family: "Coves Light", sans-serif;
+}
+
+.font-covesBold {
+  font-family: "Coves Bold", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -72,5 +114,194 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.motion-area {
+  /* border-radius: 12px; */
+  overflow: hidden;
+  position: absolute;
+  /* margin: 32px !important; */
+  inset: 0;
+  justify-content: center;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.bg-blur {
+  filter: blur(100px);
+}
+
+.noise::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.03;
+  z-index: 1000;
+  pointer-events: none;
+  background: url(/noise.gif);
+}
+
+.bg-shape1 {
+  width: 800px;
+  height: 800px;
+  border-radius: 9999px;
+  position: relative;
+  animation: one 8s infinite linear;
+}
+
+.bg-shape2 {
+  width: 800px;
+  height: 800px;
+  border-radius: 9999px;
+  position: relative;
+  animation: two 15s infinite linear;
+}
+
+/* TODO: tornar responsivo e em tailwind */
+@keyframes one {
+  0% {
+    left: -350px;
+    top: -400px;
+  }
+  10% {
+    left: -350px;
+    top: 300px;
+  }
+  20% {
+    left: 200px;
+    top: 300px;
+  }
+  30% {
+    left: 1000px;
+    top: 300px;
+  }
+  40% {
+    left: 1000px;
+    top: -400px;
+  }
+  50% {
+    left: 300px;
+    top: -400px;
+  }
+  60% {
+    left: -350px;
+    top: -400px;
+  }
+  70% {
+    left: 0px;
+    top: 300px;
+  }
+  80% {
+    left: 600px;
+    top: 300px;
+  }
+  90% {
+    left: 200px;
+    top: -200px;
+  }
+  100% {
+    left: -350px;
+    top: -400px;
+  }
+}
+
+@keyframes two {
+  0% {
+    left: 300px;
+    top: -350px;
+  }
+  5% {
+    left: 300px;
+    top: 200px;
+  }
+  10% {
+    left: -200px;
+    top: 250px;
+  }
+  15% {
+    left: -1000px;
+    top: 250px;
+  }
+  20% {
+    left: -1000px;
+    top: -350px;
+  }
+  25% {
+    left: -400px;
+    top: -350px;
+  }
+  30% {
+    left: 100px;
+    top: 250px;
+  }
+  35% {
+    left: 300px;
+    top: 250px;
+  }
+  40% {
+    left: 300px;
+    top: -350px;
+  }
+  45% {
+    left: -300px;
+    top: -350px;
+  }
+  50% {
+    left: -1000px;
+    top: -350px;
+  }
+  55% {
+    left: -1000px;
+    top: 250px;
+  }
+  60% {
+    left: -400px;
+    top: 250px;
+  }
+  65% {
+    left: 100px;
+    top: 0px;
+  }
+  70% {
+    left: -300px;
+    top: -350px;
+  }
+  75% {
+    left: -1000px;
+    top: -350px;
+  }
+  80% {
+    left: -1000px;
+    top: 250px;
+  }
+  85% {
+    left: -300px;
+    top: 250px;
+  }
+  90% {
+    left: 300px;
+    top: 250px;
+  }
+  100% {
+    left: 300px;
+    top: -350px;
+  }
+}
+
+.bg-primary {
+  background-color: rgb(29, 108, 255);
+}
+
+.bg-teal {
+  background-color: rgb(173, 0, 225);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
