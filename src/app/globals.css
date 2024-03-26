@@ -2,256 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Coves Light";
-  src: url("/fonts/Coves-Light.otf");
-}
-
-@font-face {
-  font-family: "Coves Bold";
-  src: url("/fonts/Coves-Bold.otf");
-}
-
-@font-face {
-  font-family: "Poppins Regular";
-  src: url("/fonts/Poppins-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Poppins Light";
-  src: url(/fonts/Poppins-Light.ttf);
-}
-
-.font-poppinsRegular {
-  font-family: "Poppins Regular";
-}
-
-.font-poppinsLight {
-  font-family: "Poppins Light";
-}
-
-.font-covesLight {
-  font-family: "Coves Light", sans-serif;
-}
-
-.font-covesBold {
-  font-family: "Coves Bold", sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  /* font-family: "Coves Light", sans-serif; */
-}
-
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-} */
-
-/* @media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-/* body {
-   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
-    rgb(var(--background-start-rgb)); 
-   background-repeat: no-repeat;
-  background-attachment: fixed; 
-} */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-.motion-area {
-  /* border-radius: 12px; */
-  overflow: hidden;
-  position: absolute;
-  /* margin: 32px !important; */
-  inset: 0;
-  justify-content: center;
-  display: inline-flex;
-  flex-direction: row;
-}
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-.bg-blur {
-  filter: blur(100px);
-}
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-.noise::before {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  content: "";
-  opacity: 0.03;
-  z-index: 1000;
-  pointer-events: none;
-  background: url(/noise.gif);
-}
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-.bg-shape1 {
-  width: 800px;
-  height: 800px;
-  border-radius: 9999px;
-  position: relative;
-  animation: one 8s infinite linear;
-}
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-.bg-shape2 {
-  width: 800px;
-  height: 800px;
-  border-radius: 9999px;
-  position: relative;
-  animation: two 15s infinite linear;
-}
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-/* TODO: tornar responsivo e em tailwind */
-@keyframes one {
-  0% {
-    left: -350px;
-    top: -400px;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
   }
-  10% {
-    left: -350px;
-    top: 300px;
-  }
-  20% {
-    left: 200px;
-    top: 300px;
-  }
-  30% {
-    left: 1000px;
-    top: 300px;
-  }
-  40% {
-    left: 1000px;
-    top: -400px;
-  }
-  50% {
-    left: 300px;
-    top: -400px;
-  }
-  60% {
-    left: -350px;
-    top: -400px;
-  }
-  70% {
-    left: 0px;
-    top: 300px;
-  }
-  80% {
-    left: 600px;
-    top: 300px;
-  }
-  90% {
-    left: 200px;
-    top: -200px;
-  }
-  100% {
-    left: -350px;
-    top: -400px;
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
-@keyframes two {
-  0% {
-    left: 300px;
-    top: -350px;
+@layer base {
+  * {
+    @apply border-border;
   }
-  5% {
-    left: 300px;
-    top: 200px;
-  }
-  10% {
-    left: -200px;
-    top: 250px;
-  }
-  15% {
-    left: -1000px;
-    top: 250px;
-  }
-  20% {
-    left: -1000px;
-    top: -350px;
-  }
-  25% {
-    left: -400px;
-    top: -350px;
-  }
-  30% {
-    left: 100px;
-    top: 250px;
-  }
-  35% {
-    left: 300px;
-    top: 250px;
-  }
-  40% {
-    left: 300px;
-    top: -350px;
-  }
-  45% {
-    left: -300px;
-    top: -350px;
-  }
-  50% {
-    left: -1000px;
-    top: -350px;
-  }
-  55% {
-    left: -1000px;
-    top: 250px;
-  }
-  60% {
-    left: -400px;
-    top: 250px;
-  }
-  65% {
-    left: 100px;
-    top: 0px;
-  }
-  70% {
-    left: -300px;
-    top: -350px;
-  }
-  75% {
-    left: -1000px;
-    top: -350px;
-  }
-  80% {
-    left: -1000px;
-    top: 250px;
-  }
-  85% {
-    left: -300px;
-    top: 250px;
-  }
-  90% {
-    left: 300px;
-    top: 250px;
-  }
-  100% {
-    left: 300px;
-    top: -350px;
-  }
-}
-
-.bg-primary {
-  background-color: rgb(29, 108, 255);
-}
-
-.bg-teal {
-  background-color: rgb(173, 0, 225);
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body {
+    @apply bg-background text-foreground;
   }
 }
