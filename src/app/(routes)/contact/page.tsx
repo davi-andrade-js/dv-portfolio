@@ -1,13 +1,13 @@
-import Sidebar from "@/app/components/Sidebar";
+import Sidebar from "@/components/Sidebar";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Contact() {
   return (
     <>
-      <main className=" flex flex-row justify-between">
+      <main className="z-10 flex flex-row justify-between">
         <Sidebar activeSection={"contact"} />
 
-        <div className="flex flex-col w-40 text-base font-poppinsRegular h-fit justify-end items-end space-y-4">
+        <div className="font-poppinsRegular flex h-fit w-40 flex-col items-end justify-end space-y-4 text-base">
           <ol className="flex flex-col items-end">
             <li>
               <a
@@ -17,7 +17,7 @@ export default function Contact() {
                 className="flex"
               >
                 GitHub
-                <ArrowUpRight />
+                <ArrowUpRight className="w-4" />
               </a>
             </li>
             <li>
@@ -28,7 +28,7 @@ export default function Contact() {
                 className="flex"
               >
                 LinkedIn
-                <ArrowUpRight />
+                <ArrowUpRight className="w-4" />
               </a>
             </li>
           </ol>
