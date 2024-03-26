@@ -18,6 +18,7 @@ export default function ProjectsList() {
       screenshot: "/portfolio.png",
       repositoryUrl: "",
       liveUrl: "",
+      technologies: ["TypeScript", "React", "Next.js", "TailwindCSS", "Shadcn/ui"],
     },
     {
       name: "Player de Música Retrô",
@@ -26,6 +27,7 @@ export default function ProjectsList() {
       screenshot: "/retro-music-player.png",
       repositoryUrl: "https://github.com/davi-andrade-js/Retro-Music-Player",
       liveUrl: "https://davi-andrade-js.github.io/Retro-Music-Player/",
+      technologies: ["TypeScript", "React", "Next.js", "TailwindCSS", "Shadcn/ui"],
     },
     {
       name: "Thinker AI",
@@ -34,6 +36,7 @@ export default function ProjectsList() {
       screenshot: "/thinker.png",
       repositoryUrl: "https://github.com/davi-andrade-js/Thinker-AI",
       liveUrl: "https://thinker-pmm0suqah-davis-projects-820de78a.vercel.app/",
+      technologies: ["TypeScript", "React", "Next.js", "TailwindCSS", "Shadcn/ui"],
     },
     {
       name: "Calc.js",
@@ -42,6 +45,7 @@ export default function ProjectsList() {
       screenshot: "/calc.png",
       repositoryUrl: "https://github.com/davi-andrade-js/Calc.js",
       liveUrl: "https://davi-andrade-js.github.io/Calc.js/",
+      technologies: ["TypeScript", "React", "Next.js", "TailwindCSS", "Shadcn/ui"],
     },
     {
       name: "Weather App",
@@ -50,31 +54,53 @@ export default function ProjectsList() {
       screenshot: "/weather.png",
       repositoryUrl: "",
       liveUrl: "",
+      technologies: ["TypeScript", "React", "Next.js", "TailwindCSS", "Shadcn/ui"],
     },
   ];
 
   return (
     <>
-      <div className="flex flex-row h-fit lg:justify-end md:space-x-4 lg:space-x-4 lg:items-end ">
-        {/* <div
-          className={`hidden md:block lg:block w-auto transition-opacity duration-300 ${projectOnHover !== "" ? "opacity-100" : "opacity-0"}`}
-        >
-          {projectOnHover !== "" ? (
-            <Image
-              key={projectOnHover}
-              src={projectOnHover}
-              alt={"screenshot"}
-              loading="lazy"
-              width={600}
-              height={100}
-            />
-          ) : (
-            <></>
-          )}
-        </div> */}
+      <div className="flex flex-row w-2/4 h-full lg:justify-end font-poppinsRegular lg:items-end ">
+        <ScrollArea className="h-full w-fit">
+          <div className="flex flex-col space-y-6">
+            {projects.map((project) => (
+              <>
+                {projects.indexOf(project) !== 0 ? (
+                  <div className={"border border-t-stone-900 w-full"}></div>
+                ) : (
+                  <></>
+                )}
 
-        <ScrollArea className="h-48">
-          <div className="z-10 w-full md:w-fit text-nowrap flex flex-col items-end">
+                <div className="flex flex-row space-x-3 w-full h-fit p-2">
+                  <div className="w-fit">
+                    <Image
+                      key={project.screenshot}
+                      src={project.screenshot}
+                      alt="screenshot"
+                      width={200}
+                      height={200}
+                      className="rounded-lg"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-between w-full">
+                    <div>
+                      <div className="text-lg">{project.name}</div>
+                      <div className="text-stone-500">{project.description}</div>
+                    </div>
+                    <div className="flex flex-row space-x-3">
+                      {project.technologies.map((tech) => (
+                        <div key={tech} className="">
+                          {tech}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </>
+            ))}
+          </div>
+
+          {/* <div className="z-10 w-full md:w-fit text-nowrap flex flex-col items-end">
             {projects.map((project) => (
               <>
                 {projects.indexOf(project) !== 0 ? (
@@ -103,7 +129,7 @@ export default function ProjectsList() {
                 </div>
               </>
             ))}
-          </div>
+          </div> */}
         </ScrollArea>
       </div>
 
