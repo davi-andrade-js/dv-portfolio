@@ -4,10 +4,10 @@ import { ArrowUpRight } from "lucide-react";
 export default function Contact() {
   return (
     <>
-      <main className="z-10 flex flex-row justify-between">
+      <main className="z-10 flex h-full w-full flex-col justify-between md:flex-row">
         <Sidebar activeSection={"contact"} />
 
-        <div className="font-poppinsRegular flex h-fit w-40 flex-col items-end justify-end space-y-4 text-base">
+        <div className="font-poppinsRegular flex h-fit flex-col items-end justify-end space-y-4 text-sm md:w-40 md:text-base">
           <ol className="flex flex-col items-end">
             <li>
               <a
@@ -17,7 +17,7 @@ export default function Contact() {
                 className="flex"
               >
                 GitHub
-                <ArrowUpRight className="w-4" />
+                <ArrowUpRight className="h-fit w-3 md:w-4" />
               </a>
             </li>
             <li>
@@ -28,7 +28,7 @@ export default function Contact() {
                 className="flex"
               >
                 LinkedIn
-                <ArrowUpRight className="w-4" />
+                <ArrowUpRight className="h-fit w-3 md:w-4" />
               </a>
             </li>
           </ol>

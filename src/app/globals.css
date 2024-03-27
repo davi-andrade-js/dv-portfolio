@@ -143,7 +143,7 @@
   opacity: 0.03;
   z-index: 1000;
   pointer-events: none;
-  background: url(/noise.gif);
+  background: url(/images/noise.gif);
 }
 
 .bg-shape1 {

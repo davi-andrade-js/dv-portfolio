@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import "/src/app/globals.css";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -16,9 +17,8 @@ export default function ProjectsList() {
   const projects = [
     {
       name: "Davi Andrade",
-      info: "portfólio",
-      description: "Portfólio pessoal",
-      screenshot: "/portfolio.png",
+      description: "Portfólio pessoal.",
+      screenshot: "/images/portfolio.png",
       repositoryUrl: "https://github.com/davi-andrade-js/dv-portfolio",
       liveUrl: "",
       technologies: [
@@ -32,10 +32,9 @@ export default function ProjectsList() {
     },
     {
       name: "Thinker AI",
-      info: "ferramentas de IA",
       description:
         "Ferramenta de IA com geração de textos, imagens, vídeos, áudio e código.",
-      screenshot: "/thinker.png",
+      screenshot: "/images/thinker.png",
       repositoryUrl: "https://github.com/davi-andrade-js/Thinker-AI",
       liveUrl: "https://thinker-pmm0suqah-davis-projects-820de78a.vercel.app/",
       technologies: [
@@ -51,9 +50,8 @@ export default function ProjectsList() {
     },
     {
       name: "Player de Música Retrô",
-      info: "tocador de música",
       description: "Player de música inspirado no visual do Windows 95.",
-      screenshot: "/retro-music-player.png",
+      screenshot: "/images/music-player.png",
       repositoryUrl: "https://github.com/davi-andrade-js/Retro-Music-Player",
       liveUrl: "https://davi-andrade-js.github.io/Retro-Music-Player/",
       technologies: ["JavaScript Vanilla", "HTML", "CSS"],
@@ -61,10 +59,8 @@ export default function ProjectsList() {
     },
     {
       name: "Calc.js",
-      info: "calculadora",
-      description:
-        "Calculadora feita com JavaScript para praticar lógica e estilização.",
-      screenshot: "/calc.png",
+      description: "Simples calculadora.",
+      screenshot: "/images/calc.png",
       repositoryUrl: "https://github.com/davi-andrade-js/Calc.js",
       liveUrl: "https://davi-andrade-js.github.io/Calc.js/",
       technologies: ["JavaScript Vanilla", "HTML", "CSS"],
@@ -72,25 +68,31 @@ export default function ProjectsList() {
     },
     {
       name: "Weather App",
-      info: "app de clima",
-      description: "Aplicação de clima feita com React e OpenWeatherAPI.",
-      screenshot: "/weather.png",
+      description: "Aplicação de clima e tempo com a API OpenWeather.",
+      screenshot: "/images/weather.png",
       repositoryUrl: "",
       liveUrl: "",
-      technologies: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
+      technologies: [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "OpenWeatherAPI",
+      ],
       year: "2024",
     },
   ];
 
   return (
     <>
-      <div className="font-poppinsRegular flex h-full w-3/5 flex-row lg:items-end lg:justify-end ">
-        <ScrollArea className="h-full w-3/4">
-          <div className="flex flex-col space-y-5">
+      <div className="font-poppinsRegular flex h-full w-full flex-row pt-3 md:w-3/5 md:pt-0 lg:items-end lg:justify-end ">
+        <ScrollArea className="h-full md:w-3/4 md:pr-4">
+          <div className="flex flex-col space-y-4 md:space-y-5">
             {projects.map((project) => (
               <>
                 {projects.indexOf(project) !== 0 ? (
                   <div
+                    key={project.name}
                     className={
                       "w-full border border-transparent border-t-stone-900"
                     }
@@ -100,65 +102,51 @@ export default function ProjectsList() {
                 )}
 
                 <div
-                  className={`flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl p-2 ${projectOnHover === project.name ? "card" : ""}`}
+                  className={`flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl md:p-2 ${projectOnHover === project.name ? "card" : ""}`}
                   onMouseEnter={() => setProjectOnHover(project.name)}
                   onMouseLeave={() => setProjectOnHover("")}
                 >
-                  <div className="flex w-[90%] flex-col items-end justify-between space-y-4">
+                  <div className="flex w-full flex-col items-end justify-between space-y-3 md:w-[90%] md:space-y-5">
                     <div className="flex w-full flex-col items-end">
                       <header className="font-poppinsRegular flex w-full flex-row justify-between">
-                        <div>{project.year}</div>
-                        <div className="font-covesBold flex text-xl">
+                        <div className="text-sm md:text-base">
+                          {project.year}
+                        </div>
+                        <div className="font-covesBold flex md:text-xl">
                           {project.name}
                         </div>
                       </header>
 
-                      <div className="text-right text-stone-700">
+                      <div className="text-right text-xs text-stone-700 md:text-base">
                         {project.description}
                       </div>
                     </div>
 
-                    <div className="flex flex-row flex-wrap justify-end space-x-3">
+                    <div className="flex flex-row flex-wrap justify-end gap-2">
                       {project.technologies.map((tech) => (
-                        <div key={tech} className="text-sm">
-                          {tech}
+                        <div key={tech}>
+                          <Badge className="bg-stone-900 md:text-xs">
+                            {tech}
+                          </Badge>
                         </div>
                       ))}
                     </div>
 
                     <div className="flex flex-row space-x-3">
-                      {project.repositoryUrl && project.liveUrl ? (
+                      {project.repositoryUrl ? (
                         <>
                           <Link
                             href={project.repositoryUrl}
                             target="_blank"
                             rel="noreferrer"
-                            className="flex cursor-pointer flex-row text-right text-stone-700 transition duration-300"
+                            className="text-stone-950transition flex cursor-pointer flex-row text-right text-xs text-stone-950 duration-300"
                             onMouseEnter={() => setLinkOnHover("repository")}
                             onMouseLeave={() => setLinkOnHover("")}
                           >
                             Repositório
                             <ArrowUpRight
-                              className={`ml-1 w-4 transition-all duration-150  ${
+                              className={`ml-1 h-fit w-3 transition-all duration-150 md:w-4  ${
                                 linkOnHover === "repository" &&
-                                projectOnHover === project.name
-                                  ? "pb-2"
-                                  : ""
-                              }`}
-                            />
-                          </Link>
-                          <Link
-                            href={project.liveUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="flex cursor-pointer flex-row text-right text-stone-700 transition duration-300"
-                            onMouseEnter={() => setLinkOnHover("live")}
-                            onMouseLeave={() => setLinkOnHover("")}
-                          >
-                            Site
-                            <ArrowUpRight
-                              className={`ml-1 w-4 transition-all duration-150  ${
-                                linkOnHover === "live" &&
                                 projectOnHover === project.name
                                   ? "pb-2"
                                   : ""
@@ -169,10 +157,32 @@ export default function ProjectsList() {
                       ) : (
                         <p>Em breve...</p>
                       )}
+                      {project.liveUrl ? (
+                        <Link
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex cursor-pointer flex-row text-right text-xs text-stone-950 transition duration-300 md:text-base"
+                          onMouseEnter={() => setLinkOnHover("live")}
+                          onMouseLeave={() => setLinkOnHover("")}
+                        >
+                          Website
+                          <ArrowUpRight
+                            className={`ml-1 h-fit w-3 transition-all duration-150 md:w-4 ${
+                              linkOnHover === "live" &&
+                              projectOnHover === project.name
+                                ? "pb-2"
+                                : ""
+                            }`}
+                          />
+                        </Link>
+                      ) : (
+                        <></>
+                      )}
                     </div>
                   </div>
 
-                  <div className="w-fit">
+                  <div className="hidden w-fit md:block">
                     <Image
                       key={project.screenshot}
                       src={project.screenshot}
