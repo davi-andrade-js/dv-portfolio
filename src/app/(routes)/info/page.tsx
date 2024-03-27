@@ -1,6 +1,8 @@
 import Sidebar from "@/components/Sidebar";
 import { Badge } from "@/components/ui/badge";
 
+// TODO: refactor this component
+
 export default function Info() {
   const frontTechs = [
     "TypeScript",

@@ -1,6 +1,8 @@
 import Sidebar from "@/components/Sidebar";
 import { ArrowUpRight } from "lucide-react";
 
+// TODO: refactor this component
+
 export default function Contact() {
   return (
     <>

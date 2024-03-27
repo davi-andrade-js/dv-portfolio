@@ -1,14 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import "/src/app/globals.css";
+import { ArrowUpRight } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 
-// TODO exclude lg where not needed
+// TODO: refactor this component and create a link component
 
 export default function ProjectsList() {
   const [projectOnHover, setProjectOnHover] = React.useState("");

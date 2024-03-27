@@ -19,17 +19,8 @@
   src: url("/fonts/Poppins-Regular.ttf");
 }
 
-@font-face {
-  font-family: "Poppins Light";
-  src: url(/fonts/Poppins-Light.ttf);
-}
-
 .font-poppinsRegular {
   font-family: "Poppins Regular";
-}
-
-.font-poppinsLight {
-  font-family: "Poppins Light";
 }
 
 .font-covesLight {
