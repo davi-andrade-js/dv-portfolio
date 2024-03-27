@@ -15,7 +15,7 @@ export default function Header() {
 
       <div className="z-10">
         <Image
-          className="w-9 md:w-12 lg:w-12"
+          className="w-9 opacity-40 md:w-12 lg:w-12"
           width={50}
           height={50}
           alt="Theme"

@@ -102,7 +102,7 @@ export default function ProjectsList() {
                 )}
 
                 <div
-                  className={`flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl md:p-2 ${projectOnHover === project.name ? "card" : ""}`}
+                  className={`flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl transition-all duration-150 md:p-2 ${projectOnHover === project.name ? "card" : ""}`}
                   onMouseEnter={() => setProjectOnHover(project.name)}
                   onMouseLeave={() => setProjectOnHover("")}
                 >
@@ -139,13 +139,13 @@ export default function ProjectsList() {
                             href={project.repositoryUrl}
                             target="_blank"
                             rel="noreferrer"
-                            className="text-stone-950transition flex cursor-pointer flex-row text-right text-xs text-stone-950 duration-300"
+                            className="text-stone-950transition flex cursor-pointer flex-row text-right text-xs text-stone-950 duration-300 md:text-base"
                             onMouseEnter={() => setLinkOnHover("repository")}
                             onMouseLeave={() => setLinkOnHover("")}
                           >
                             Repositório
                             <ArrowUpRight
-                              className={`ml-1 h-fit w-3 transition-all duration-150 md:w-4  ${
+                              className={`ml-1 h-fit w-3 transition-all duration-150 md:h-auto md:w-4  ${
                                 linkOnHover === "repository" &&
                                 projectOnHover === project.name
                                   ? "pb-2"
@@ -168,7 +168,7 @@ export default function ProjectsList() {
                         >
                           Website
                           <ArrowUpRight
-                            className={`ml-1 h-fit w-3 transition-all duration-150 md:w-4 ${
+                            className={`ml-1 h-fit w-3 transition-all duration-150 md:h-auto md:w-4 ${
                               linkOnHover === "live" &&
                               projectOnHover === project.name
                                 ? "pb-2"

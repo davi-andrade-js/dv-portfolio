@@ -9,7 +9,7 @@ export default function Home() {
       <main className="flex h-full w-full flex-col justify-between md:flex-row">
         <Sidebar activeSection={"home"} />
 
-        <div className="z-10 flex w-full items-end justify-end">
+        <div className="z-10 flex w-full justify-end">
           <article className="font-poppinsRegular flex w-32 cursor-default text-end text-xs md:w-40 md:text-base">
             <p>
               {`Graduando em Análise e Desenvolvimento de Sistemas. Gosto muito de arte e a consumo em forma de livros, jogos e cinema. Antes do meu primeiro "Hello World", fiz trabalhos voluntários e estive engajado no protagonismo estudantil durante o ensino médio.`}
