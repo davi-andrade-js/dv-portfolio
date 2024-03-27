@@ -22,7 +22,7 @@ export default function Contact() {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/davi-andrade-js/"
+                href="https://www.linkedin.com/in/andrade-davi/"
                 target="_blank"
                 rel="noreferrer"
                 className="flex"

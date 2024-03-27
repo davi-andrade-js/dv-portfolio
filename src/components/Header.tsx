@@ -1,5 +1,6 @@
 "use client";
 
+import { Moon } from "lucide-react";
 import Image from "next/image";
 import { toast } from "sonner";
 
@@ -14,12 +15,8 @@ export default function Header() {
       </div>
 
       <div className="z-10">
-        <Image
-          className="w-9 opacity-40 md:w-12 lg:w-12"
-          width={50}
-          height={50}
-          alt="Theme"
-          src={"/dark.png"}
+        <Moon
+          className="w-fit opacity-40"
           onClick={() => {
             toast(
               `🌚 Esta é a versão beta. Troca de tema ainda não foi implementada.`,
