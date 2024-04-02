@@ -26,7 +26,7 @@ export default function Sidebar({ activeSection }: { activeSection: string }) {
   ];
 
   return (
-    <nav className="font-covesBold flex w-fit flex-col space-y-5 text-base md:text-lg lg:text-lg">
+    <nav className="font-covesBold flex w-fit flex-col space-y-5 text-base transition-all duration-150 md:text-lg lg:text-lg">
       {navItems.map((item) => (
         <Link
           key={item.name}

@@ -101,11 +101,11 @@ export default function ProjectsList() {
                 )}
 
                 <div
-                  className={`flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl transition-all duration-150 md:p-2 ${projectOnHover === project.name ? "card" : ""}`}
+                  className={`hover:card flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl transition-all duration-150 md:p-2 ${projectOnHover === project.name ? "card" : ""}`}
                   onMouseEnter={() => setProjectOnHover(project.name)}
                   onMouseLeave={() => setProjectOnHover("")}
                 >
-                  <div className="flex w-full flex-col items-end justify-between space-y-3 md:w-[90%] md:space-y-5">
+                  <div className="flex w-full flex-col items-end justify-between space-y-3 transition-all duration-150 md:w-[90%] md:space-y-5">
                     <div className="flex w-full flex-col items-end">
                       <header className="font-poppinsRegular flex w-full flex-row justify-between">
                         <div className="text-sm md:text-base">
@@ -116,7 +116,7 @@ export default function ProjectsList() {
                         </div>
                       </header>
 
-                      <div className="text-right text-xs text-stone-700 md:text-base">
+                      <div className="secondary text-right text-xs md:text-base">
                         {project.description}
                       </div>
                     </div>
@@ -124,21 +124,19 @@ export default function ProjectsList() {
                     <div className="flex flex-row flex-wrap justify-end gap-2">
                       {project.technologies.map((tech) => (
                         <div key={tech}>
-                          <Badge className="bg-stone-900 md:text-xs">
-                            {tech}
-                          </Badge>
+                          <Badge className="badge md:text-xs">{tech}</Badge>
                         </div>
                       ))}
                     </div>
 
-                    <div className="flex flex-row space-x-3">
+                    <div className="flex flex-row space-x-3 ">
                       {project.repositoryUrl ? (
                         <>
                           <Link
                             href={project.repositoryUrl}
                             target="_blank"
                             rel="noreferrer"
-                            className="text-stone-950transition flex cursor-pointer flex-row text-right text-xs text-stone-950 duration-300 md:text-base"
+                            className="flex cursor-pointer flex-row text-right text-xs  md:text-base"
                             onMouseEnter={() => setLinkOnHover("repository")}
                             onMouseLeave={() => setLinkOnHover("")}
                           >
@@ -161,7 +159,7 @@ export default function ProjectsList() {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex cursor-pointer flex-row text-right text-xs text-stone-950 transition duration-300 md:text-base"
+                          className="flex cursor-pointer flex-row text-right text-xs md:text-base"
                           onMouseEnter={() => setLinkOnHover("live")}
                           onMouseLeave={() => setLinkOnHover("")}
                         >
