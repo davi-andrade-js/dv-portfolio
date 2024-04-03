@@ -107,13 +107,11 @@ export default function ProjectsList() {
                 >
                   <div className="duration flex w-full flex-col items-end justify-between space-y-3 transition-all  md:w-[90%] md:space-y-5">
                     <div className="flex w-full flex-col items-end transition-all">
-                      <header className="font-poppinsRegular flex w-full flex-row justify-between">
+                      <header className="font-poppinsMedium flex w-full flex-row justify-between">
                         <div className="text-sm md:text-base">
                           {project.year}
                         </div>
-                        <div className="font-covesBold flex md:text-xl">
-                          {project.name}
-                        </div>
+                        <div className="flex md:text-lg">{project.name}</div>
                       </header>
 
                       <div className="text-secondary text-right text-xs transition-all md:text-base">

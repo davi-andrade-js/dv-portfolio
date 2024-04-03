@@ -6,7 +6,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function Header() {
   return (
-    <header className="font-covesLight mb-8 flex w-full flex-row justify-between">
+    <header className="font-poppinsRegular mb-8 flex w-full flex-row justify-between">
       <div className="z-10 flex h-fit cursor-default flex-col transition-all">
         <p className=" text-3xl transition-all md:text-6xl lg:text-6xl">
           Davi Andrade

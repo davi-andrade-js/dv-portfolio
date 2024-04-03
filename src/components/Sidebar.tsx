@@ -4,29 +4,32 @@ import Link from "next/link";
 export default function Sidebar({ activeSection }: { activeSection: string }) {
   const navItems = [
     {
-      name: "Início",
+      name: "INÍCIO",
       href: "/",
       section: "home",
     },
     {
-      name: "Projetos",
+      name: "PROJETOS",
       href: "/projects",
       section: "projects",
     },
     {
-      name: "Sobre",
+      name: "SOBRE",
       href: "/info",
       section: "info",
     },
     {
-      name: "Contato",
+      name: "CONTATO",
       href: "/contact",
       section: "contact",
     },
   ];
 
   return (
-    <nav className="font-covesBold flex w-fit flex-col space-y-5 text-base transition-all md:text-lg lg:text-lg">
+    <nav
+      className="font-poppinsMedium
+     lg:text-md md:text-md flex w-fit flex-col space-y-5 text-base transition-all"
+    >
       {navItems.map((item) => (
         <Link
           key={item.name}

@@ -5,11 +5,6 @@
 /* TODO: turn into talwind */
 
 @font-face {
-  font-family: "Geomatrix";
-  src: url("/fonts/Geomatrix.otf");
-}
-
-@font-face {
   font-family: "Coves Light";
   src: url("/fonts/Coves-Light.otf");
 }
@@ -20,21 +15,12 @@
 }
 
 @font-face {
-  font-family: "Poppins Regular";
-  src: url("/fonts/Poppins-Regular.ttf");
+  font-family: "Poppins Medium";
+  src: url("/fonts/Poppins-Medium.ttf");
 }
 
-@font-face {
-  font-family: "Poppins-Thin";
-  src: url("/fonts/Poppins-Thin.ttf");
-}
-
-.font-poppinsThin {
-  font-family: "Poppins-Thin";
-}
-
-.font-geomatrix {
-  font-family: "Geomatrix";
+.font-poppinsMedium {
+  font-family: "Poppins Medium";
 }
 
 .font-poppinsRegular {
@@ -325,6 +311,18 @@ body {
 }
 
 @layer utilities {
+  .nav {
+    @apply relative tracking-[1px];
+  }
+
+  .nav::after {
+    @apply absolute -bottom-[0px] left-0 h-[3px] w-[0%] rounded-xl bg-zinc-800 duration-300 content-[''];
+  }
+
+  .nav:hover::after {
+    @apply w-[100%];
+  }
+
   .text-balance {
     text-wrap: balance;
   }

@@ -5,8 +5,6 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 
-// TODO: refactor this component
-
 export default function Contact() {
   const [onHover, setOnHover] = useState("");
 
