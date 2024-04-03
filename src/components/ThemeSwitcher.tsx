@@ -6,7 +6,7 @@ import { Sun } from "lucide-react";
 
 export default function ThemeSwitcher() {
   const [theme, setTheme] = useState("");
-  const [show, setShow] = useState(false);
+  const [bgOnHover, setBgOnHover] = useState(false);
 
   const setDarkMode = () => {
     document.documentElement.classList.add("dark");
@@ -23,27 +23,17 @@ export default function ThemeSwitcher() {
       <div className="z-10 cursor-pointer">
         {theme === "dark" ? (
           <Sun
-            className={`w-fit ${show ? "rounded-full bg-stone-50 bg-opacity-15" : ""}`}
+            className={`w-fit ${bgOnHover ? "rounded-full bg-stone-50 bg-opacity-15" : ""}`}
             onClick={() => setLightMode()}
-            onMouseEnter={() => {
-              setShow(true);
-            }}
-            onMouseLeave={() => {
-              setShow(false);
-            }}
+            onMouseEnter={() => setBgOnHover(true)}
+            onMouseLeave={() => setBgOnHover(false)}
           />
         ) : (
           <Moon
-            className={`w-fit ${show ? "rounded-full bg-stone-950 bg-opacity-15" : ""}`}
-            onMouseEnter={() => {
-              setShow(true);
-            }}
-            onMouseLeave={() => {
-              setShow(false);
-            }}
-            onClick={() => {
-              setDarkMode();
-            }}
+            className={`w-fit ${bgOnHover ? "rounded-full bg-stone-950 bg-opacity-15" : ""}`}
+            onClick={() => setDarkMode()}
+            onMouseEnter={() => setBgOnHover(true)}
+            onMouseLeave={() => setBgOnHover(false)}
           />
         )}
       </div>

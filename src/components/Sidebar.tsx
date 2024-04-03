@@ -26,12 +26,12 @@ export default function Sidebar({ activeSection }: { activeSection: string }) {
   ];
 
   return (
-    <nav className="font-covesBold flex w-fit flex-col space-y-5 text-base transition-all duration-150 md:text-lg lg:text-lg">
+    <nav className="font-covesBold flex w-fit flex-col space-y-5 text-base transition-all md:text-lg lg:text-lg">
       {navItems.map((item) => (
         <Link
           key={item.name}
           href={item.href}
-          className={`z-10 w-fit cursor-pointer transition-all duration-150 hover:pl-2 ${activeSection === item.section ? "underline" : ""}`}
+          className={`z-10 w-fit cursor-pointer transition-all hover:pl-2 ${activeSection === item.section ? "underline" : ""}`}
         >
           <p>{item.name}</p>
         </Link>

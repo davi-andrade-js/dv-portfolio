@@ -101,12 +101,12 @@ export default function ProjectsList() {
                 )}
 
                 <div
-                  className={`hover:card flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl transition-all duration-150 md:p-2 ${projectOnHover === project.name ? "card" : ""}`}
+                  className={`hover:card flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl  md:p-2 ${projectOnHover === project.name ? "card" : ""}`}
                   onMouseEnter={() => setProjectOnHover(project.name)}
                   onMouseLeave={() => setProjectOnHover("")}
                 >
-                  <div className="flex w-full flex-col items-end justify-between space-y-3 transition-all duration-150 md:w-[90%] md:space-y-5">
-                    <div className="flex w-full flex-col items-end">
+                  <div className="duration flex w-full flex-col items-end justify-between space-y-3 transition-all  md:w-[90%] md:space-y-5">
+                    <div className="flex w-full flex-col items-end transition-all">
                       <header className="font-poppinsRegular flex w-full flex-row justify-between">
                         <div className="text-sm md:text-base">
                           {project.year}
@@ -116,15 +116,17 @@ export default function ProjectsList() {
                         </div>
                       </header>
 
-                      <div className="secondary text-right text-xs md:text-base">
-                        {project.description}
+                      <div className="text-secondary text-right text-xs transition-all md:text-base">
+                        <p className="transition-all">{project.description}</p>
                       </div>
                     </div>
 
                     <div className="flex flex-row flex-wrap justify-end gap-2">
                       {project.technologies.map((tech) => (
                         <div key={tech}>
-                          <Badge className="badge md:text-xs">{tech}</Badge>
+                          <Badge className="badge transition-all md:text-xs">
+                            <p className="transition-all">{tech}</p>
+                          </Badge>
                         </div>
                       ))}
                     </div>
@@ -140,9 +142,9 @@ export default function ProjectsList() {
                             onMouseEnter={() => setLinkOnHover("repository")}
                             onMouseLeave={() => setLinkOnHover("")}
                           >
-                            Repositório
+                            <p className="transition-all">Repositório</p>
                             <ArrowUpRight
-                              className={`ml-1 h-fit w-3 transition-all duration-150 md:h-auto md:w-4  ${
+                              className={`ml-1 h-fit w-3 transition-all md:h-auto md:w-4  ${
                                 linkOnHover === "repository" &&
                                 projectOnHover === project.name
                                   ? "pb-2"
@@ -163,9 +165,9 @@ export default function ProjectsList() {
                           onMouseEnter={() => setLinkOnHover("live")}
                           onMouseLeave={() => setLinkOnHover("")}
                         >
-                          Website
+                          <p className="transition-all">Website</p>
                           <ArrowUpRight
-                            className={`ml-1 h-fit w-3 transition-all duration-150 md:h-auto md:w-4 ${
+                            className={`ml-1 h-fit w-3 transition-all md:h-auto md:w-4 ${
                               linkOnHover === "live" &&
                               projectOnHover === project.name
                                 ? "pb-2"
