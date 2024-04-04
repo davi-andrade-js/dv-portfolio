@@ -5,13 +5,8 @@
 /* TODO: turn into talwind */
 
 @font-face {
-  font-family: "Coves Light";
-  src: url("/fonts/Coves-Light.otf");
-}
-
-@font-face {
-  font-family: "Coves Bold";
-  src: url("/fonts/Coves-Bold.otf");
+  font-family: "Poppins Regular";
+  src: url("/fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
@@ -19,20 +14,12 @@
   src: url("/fonts/Poppins-Medium.ttf");
 }
 
-.font-poppinsMedium {
-  font-family: "Poppins Medium";
-}
-
 .font-poppinsRegular {
   font-family: "Poppins Regular";
 }
 
-.font-covesLight {
-  font-family: "Coves Light", sans-serif;
-}
-
-.font-covesBold {
-  font-family: "Coves Bold", sans-serif;
+.font-poppinsMedium {
+  font-family: "Poppins Medium";
 }
 
 body {
