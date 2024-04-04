@@ -12,7 +12,7 @@ export default function Home() {
         <div className="z-10 flex w-full justify-end">
           <article className="font-poppinsRegular flex w-32 cursor-default text-end text-xs transition-all md:w-40 md:text-base">
             <p className="transition-all">
-              {`Graduando em Análise e Desenvolvimento de Sistemas. Gosto muito de arte e a consumo em forma de livros, jogos e cinema. Antes do meu primeiro "Hello World", fiz trabalhos voluntários e estive engajado no protagonismo estudantil durante o ensino médio.`}
+              {`Desenvolvedor Web e Graduando em Análise e Desenvolvimento de Sistemas. Antes do meu primeiro "Hello World", fiz trabalhos voluntários e estive engajado no protagonismo estudantil durante o ensino médio.`}
             </p>
           </article>
         </div>

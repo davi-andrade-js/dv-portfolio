@@ -4,22 +4,22 @@ import Link from "next/link";
 export default function Sidebar({ activeSection }: { activeSection: string }) {
   const navItems = [
     {
-      name: "INÍCIO",
+      name: "Início",
       href: "/",
       section: "home",
     },
     {
-      name: "PROJETOS",
+      name: "Projetos",
       href: "/projects",
       section: "projects",
     },
     {
-      name: "SOBRE",
+      name: "Sobre",
       href: "/info",
       section: "info",
     },
     {
-      name: "CONTATO",
+      name: "Contato",
       href: "/contact",
       section: "contact",
     },

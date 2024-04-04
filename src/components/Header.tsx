@@ -8,12 +8,12 @@ export default function Header() {
   return (
     <header className="font-poppinsRegular mb-8 flex w-full flex-row justify-between">
       <div className="z-10 flex h-fit cursor-default flex-col transition-all">
-        <p className=" text-3xl transition-all md:text-6xl lg:text-6xl">
+        <h1 className=" text-3xl transition-all md:text-6xl lg:text-6xl">
           Davi Andrade
-        </p>
-        <p className=" text-md transition-all md:text-2xl lg:text-2xl">
+        </h1>
+        <h1 className=" text-md transition-all md:text-2xl lg:text-2xl">
           Desenvolvedor FrontEnd
-        </p>
+        </h1>
       </div>
 
       <ThemeSwitcher />
