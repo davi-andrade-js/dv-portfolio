@@ -7,13 +7,13 @@ export default function LoadingScreen() {
 
   useEffect(() => {
     setTimeout(() => {
-      setVisible(false);    
+      setVisible(false);
     }, 2000);
   }, []);
 
   return (
     <div
-      className={`absolute left-0 top-0 z-30 h-screen w-screen items-center justify-center bg-slate-400 opacity-100 duration-700 ${
+      className={`absolute left-0 top-0 z-50 h-screen w-screen items-center justify-center bg-slate-400 opacity-100 duration-700 ${
         visible ? "flex" : "z-0 bg-opacity-0"
       }`}
     >
