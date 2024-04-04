@@ -14,20 +14,22 @@ export default function ThemeSwitcher() {
       document.documentElement.classList.add("light");
       return;
     }
-    if (localStorage.theme === "dark") {
+    if (localStorage.theme === "") {
       document.documentElement.classList.remove("light");
       return;
     }
   }, []);
 
-  const setLightMode = () => {
-    document.documentElement.classList.add("light");
-    localStorage.theme = "light";
-  };
-
   const setDarkMode = () => {
     document.documentElement.classList.remove("light");
     localStorage.theme = "";
+    setTheme("");
+  };
+
+  const setLightMode = () => {
+    document.documentElement.classList.add("light");
+    localStorage.theme = "light";
+    setTheme("light");
   };
 
   return (
