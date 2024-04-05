@@ -183,7 +183,7 @@ export default function ProjectsList() {
                     <Image
                       key={project.screenshot}
                       src={project.screenshot}
-                      alt="screenshot"
+                      alt="captura de tela do projeto"
                       width={200}
                       height={200}
                       className="rounded-lg border-2 border-zinc-400"

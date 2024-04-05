@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   description:
     "Davi Andrade é um Desenvolvedor FrontEnd que constrói sites inspiradores e funcionais.",
   keywords: ["Davi Andrade", "Desenvolvedor", "FrontEnd", "Web", "Portfólio"],
-  robots: "noindex",
 };
 
 export default function RootLayout({
@@ -25,6 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <link
+          rel="canonical"
+          href="https://dv-portfolio-davis-projects-820de78a.vercel.app/"
+        />
+        <meta name="robots" content="noindex" />
         <meta
           http-equiv="Content-Security-Policy"
           content="default-src 'self'; img-src https://*; child-src 'none';"
