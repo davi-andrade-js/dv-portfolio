@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Toaster } from "sonner";
+import Head from "next/head";
 import MovingLights from "@/components/MovingLights";
 import Header from "../components/Header";
-import "./globals.css";
 import LoadingScreen from "@/components/LoadingScreen";
+// import { Toaster } from "sonner";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Davi Andrade (BETA)",
-  description: "Davi's personal portfolio",
+  title: "Davi Andrade - Portfólio(BETA)",
+  description:
+    "Davi Andrade é um Desenvolvedor FrontEnd que constrói sites inspiradores e funcionais.",
+  keywords: ["Davi Andrade", "Desenvolvedor", "FrontEnd", "Web", "Portfólio"],
+  robots: "noindex",
 };
 
 export default function RootLayout({
@@ -20,6 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src https://*; child-src 'none';"
+        ></meta>
+      </Head>
       <body className={inter.className}>
         {/* <LoadingScreen /> */}
         <div className="noise"></div>
@@ -27,7 +37,7 @@ export default function RootLayout({
           <MovingLights />
           <Header />
           {children}
-          <Toaster />
+          {/* <Toaster /> */}
         </section>
         <footer className="font-poppinsRegular z-10 ml-5 text-xs text-zinc-600 md:ml-8 md:pl-5 md:pt-2">
           Esta é a versão beta. Responsividade e algumas correções estão em

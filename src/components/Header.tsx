@@ -11,9 +11,9 @@ export default function Header() {
         <h1 className=" text-3xl transition-all md:text-6xl lg:text-6xl">
           Davi Andrade
         </h1>
-        <h1 className=" text-md transition-all md:text-2xl lg:text-2xl">
+        <h2 className=" text-md transition-all md:text-2xl lg:text-2xl">
           Desenvolvedor FrontEnd
-        </h1>
+        </h2>
       </div>
 
       <ThemeSwitcher />
