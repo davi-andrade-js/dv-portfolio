@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import MovingLights from "@/components/MovingLights";
 import Header from "../components/Header";
+import Sidebar from "@/components/Sidebar";
 import LoadingScreen from "@/components/LoadingScreen";
 // import { Toaster } from "sonner";
 import "./globals.css";
@@ -10,7 +11,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Davi Andrade - Portfólio(BETA)",
+  title: "Davi Andrade - Portfólio (BETA)",
   description:
     "Davi Andrade é um Desenvolvedor FrontEnd que constrói sites inspiradores e funcionais.",
   keywords: ["Davi Andrade", "Desenvolvedor", "FrontEnd", "Web", "Portfólio"],
@@ -40,7 +41,10 @@ export default function RootLayout({
         <section className="z-10 m-5 mb-0 flex h-[91vh] flex-col rounded-xl p-2 md:m-8 md:p-5 lg:m-8 lg:mb-0 lg:p-5">
           <MovingLights />
           <Header />
-          {children}
+          <main className="flex w-full flex-row justify-between overflow-hidden">
+            <Sidebar />
+            {children}
+          </main>
           {/* <Toaster /> */}
         </section>
         <footer className="font-poppinsRegular z-10 ml-5 text-xs text-zinc-600 md:ml-8 md:pl-5 md:pt-2">

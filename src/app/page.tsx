@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <main className="flex h-full w-full flex-col justify-between md:flex-row">
-        <Sidebar activeSection={"home"} />
+        <div></div>
 
         <div className="z-10 flex w-full justify-end">
           <article className="font-poppinsRegular flex w-32 cursor-default text-end text-xs transition-all md:w-40 md:text-base">

@@ -37,7 +37,7 @@ export default function Info() {
   return (
     <>
       <main className="flex h-full flex-col justify-between md:flex-row">
-        <Sidebar activeSection={"info"} />
+        <div></div>
 
         <div className="font-poppinsRegular z-10 flex h-fit flex-col items-end justify-end space-y-4 text-base transition-all md:w-72 md:space-y-6">
           {skills.map((skill) => (

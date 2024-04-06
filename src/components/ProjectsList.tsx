@@ -84,7 +84,7 @@ export default function ProjectsList() {
 
   return (
     <>
-      <div className="font-poppinsRegular flex h-full w-full flex-row pt-3 md:w-3/5 md:pt-0 lg:items-end lg:justify-end ">
+      <div className="font-poppinsRegular flex h-full w-full flex-row overflow-hidden pt-3 md:w-3/5 md:pt-0 lg:items-end lg:justify-end ">
         <ScrollArea className="h-full md:w-3/4 md:pr-4">
           <div className="flex flex-col space-y-4 md:space-y-5">
             {projects.map((project) => (
@@ -93,7 +93,7 @@ export default function ProjectsList() {
                   <div
                     key={project.name}
                     className={
-                      "w-full border border-transparent border-t-stone-900"
+                      "badge w-full border border-transparent duration-150"
                     }
                   ></div>
                 ) : (

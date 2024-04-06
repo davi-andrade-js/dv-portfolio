@@ -1,7 +1,14 @@
+"use client";
+
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 import React from "react";
 import Link from "next/link";
 
-export default function Sidebar({ activeSection }: { activeSection: string }) {
+export default function Sidebar() {
+  const route = usePathname();
+  // const [onHover, setOnHover] = useState("");
+
   const navItems = [
     {
       name: "Início",
@@ -34,7 +41,7 @@ export default function Sidebar({ activeSection }: { activeSection: string }) {
         <Link
           key={item.name}
           href={item.href}
-          className={`z-10 w-fit cursor-pointer transition-all hover:pl-2 ${activeSection === item.section ? "underline" : ""}`}
+          className={`z-10 w-fit cursor-pointer transition-all hover:pl-2 ${route === item.href ? "underline " : ""}`}
         >
           <p>{item.name}</p>
         </Link>

@@ -24,7 +24,7 @@ export default function Contact() {
   return (
     <>
       <main className="z-10 flex h-full w-full flex-col justify-between md:flex-row">
-        <Sidebar activeSection={"contact"} />
+        <div></div>
 
         <div className="font-poppinsRegular flex h-fit flex-col items-end justify-end space-y-4 text-sm transition-all md:w-40 md:text-base">
           <div className="flex flex-col items-end">
