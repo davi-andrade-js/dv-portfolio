@@ -32,6 +32,31 @@ body {
   padding: 0;
 }
 
+.text-glow {
+  background: linear-gradient(
+    to left,
+    #000000 20%,
+    #ffffff 30%,
+    #ffffff 70%,
+    #000000 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-emphasis-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 1400ms ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @layer base {
   :root {
     --background: 222.2 84% 4.9%;
