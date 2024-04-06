@@ -1,7 +1,8 @@
 "use client";
+import Link from "next/link";
+import { Github } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
-import { Moon } from "lucide-react";
-import { toast } from "sonner";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function Header() {
@@ -16,7 +17,28 @@ export default function Header() {
         </h2>
       </div>
 
-      <ThemeSwitcher />
+      <div className="z-10 flex flex-row space-x-4">
+        <div key={"GitHub"} className="display flex flex-row space-x-1">
+          <Link
+            key={"GitHub"}
+            href="https://github.com/davi-andrade-js"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Github className="cursor-pointer transition-all hover:text-neutral-500" />
+          </Link>
+          <Link
+            key={"LinkedIn"}
+            href={"https://www.linkedin.com/in/andrade-davi/"}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Linkedin className="cursor-pointer transition-all hover:text-neutral-500" />
+          </Link>
+        </div>
+
+        <ThemeSwitcher />
+      </div>
     </header>
   );
 }

@@ -93,7 +93,7 @@ export default function ProjectsList() {
                   <div
                     key={project.name}
                     className={
-                      "badge w-full border border-transparent duration-150"
+                      "badge w-full border border-transparent transition-all"
                     }
                   ></div>
                 ) : (
@@ -101,11 +101,11 @@ export default function ProjectsList() {
                 )}
 
                 <div
-                  className={`hover:card flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl  md:p-2 ${projectOnHover === project.name ? "card" : ""}`}
+                  className={`trasition-all flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl md:p-2 ${projectOnHover === project.name ? "card" : ""}`}
                   onMouseEnter={() => setProjectOnHover(project.name)}
                   onMouseLeave={() => setProjectOnHover("")}
                 >
-                  <div className="duration flex w-full flex-col items-end justify-between space-y-3 transition-all  md:w-[90%] md:space-y-5">
+                  <div className=" flex w-full flex-col items-end justify-between space-y-3 transition-all  md:w-[90%] md:space-y-4">
                     <div className="flex w-full flex-col items-end transition-all">
                       <header className="font-poppinsMedium flex w-full flex-row justify-between">
                         <div className="text-sm md:text-base">
@@ -183,7 +183,7 @@ export default function ProjectsList() {
                     <Image
                       key={project.screenshot}
                       src={project.screenshot}
-                      alt="captura de tela do projeto"
+                      alt="Preview do projeto"
                       width={200}
                       height={200}
                       className="rounded-lg border-2 border-zinc-400"

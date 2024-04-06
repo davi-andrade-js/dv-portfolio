@@ -26,8 +26,8 @@ export default function Contact() {
       <main className="z-10 flex h-full w-full flex-col justify-between md:flex-row">
         <div></div>
 
-        <div className="font-poppinsRegular flex h-fit flex-col items-end justify-end space-y-4 text-sm transition-all md:w-40 md:text-base">
-          <div className="flex flex-col items-end">
+        <div className="font-poppinsRegular flex h-fit flex-col items-end justify-end text-sm transition-all md:w-40 md:text-base">
+          {/* <div className="flex flex-col items-end">
             {redirectInfo.map((info) => (
               <div key={info.name}>
                 <Link
@@ -48,9 +48,9 @@ export default function Contact() {
                 </Link>
               </div>
             ))}
-          </div>
+          </div> */}
 
-          <div className="flex flex-col items-end">
+          <div className="flex flex-col items-end space-y-1">
             {contactInfo.map((info) => (
               <p key={info}>{info}</p>
             ))}

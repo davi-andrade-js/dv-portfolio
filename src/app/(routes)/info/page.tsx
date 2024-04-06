@@ -1,3 +1,4 @@
+import Resume from "@/components/Resume";
 import Sidebar from "@/components/Sidebar";
 import { Badge } from "@/components/ui/badge";
 
@@ -56,6 +57,7 @@ export default function Info() {
               </div>
             </div>
           ))}
+          <Resume />
         </div>
       </main>
     </>

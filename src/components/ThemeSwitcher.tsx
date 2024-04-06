@@ -37,14 +37,16 @@ export default function ThemeSwitcher() {
       <div className="z-10 cursor-pointer">
         {theme === "light" ? (
           <Moon
-            className={`w-fit ${bgOnHover ? "rounded-full bg-stone-950 bg-opacity-15" : ""}`}
+            className={`w-fit hover:text-neutral-500 `}
             onClick={() => setDarkMode()}
             onMouseEnter={() => setBgOnHover(true)}
             onMouseLeave={() => setBgOnHover(false)}
           />
         ) : (
+          // ${bgOnHover ? "rounded-full bg-stone-950 bg-opacity-15" : ""}
+          // ${bgOnHover ? "rounded-full bg-stone-50 bg-opacity-20" : ""}
           <Sun
-            className={`w-fit ${bgOnHover ? "rounded-full bg-stone-50 bg-opacity-20" : ""}`}
+            className={`w-fit hover:text-neutral-500 `}
             onClick={() => setLightMode()}
             onMouseEnter={() => setBgOnHover(true)}
             onMouseLeave={() => setBgOnHover(false)}
