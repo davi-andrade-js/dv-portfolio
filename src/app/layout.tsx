@@ -11,7 +11,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Davi Andrade - Portfólio (BETA)",
+  title: "Davi Andrade - Portfólio",
   description:
     "Davi Andrade é um Desenvolvedor FrontEnd que constrói sites inspiradores e funcionais.",
   keywords: ["Davi Andrade", "Desenvolvedor", "FrontEnd", "Web", "Portfólio"],
@@ -25,10 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link
-          rel="canonical"
-          href="https://dv-portfolio-davis-projects-820de78a.vercel.app/"
-        />
+        <link rel="canonical" href="https://dv-portfolio-three.vercel.app" />
         <meta name="robots" content="noindex" />
         <meta
           http-equiv="Content-Security-Policy"
@@ -47,10 +44,6 @@ export default function RootLayout({
           </main>
           {/* <Toaster /> */}
         </section>
-        <footer className="font-poppinsRegular z-10 ml-5 text-xs text-zinc-600 md:ml-8 md:pl-5 md:pt-2">
-          Esta é a versão beta. Responsividade e algumas correções estão em
-          desenvolvimento.
-        </footer>
       </body>
     </html>
   );

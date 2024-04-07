@@ -55,6 +55,7 @@ export default function Info() {
               </div>
             </div>
           ))}
+
           <Resume />
         </div>
       </main>
