@@ -1,13 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { usePathname } from "next/navigation";
 import React from "react";
 import Link from "next/link";
 
 export default function Sidebar() {
   const route = usePathname();
-  // const [onHover, setOnHover] = useState("");
 
   const navItems = [
     {
@@ -33,15 +31,12 @@ export default function Sidebar() {
   ];
 
   return (
-    <nav
-      className="font-poppinsMedium
-     lg:text-md md:text-md flex w-fit flex-col space-y-5 text-base transition-all"
-    >
+    <nav className="font-poppinsMedium flex w-fit flex-col space-y-4 text-sm transition-all md:space-y-5 md:text-base">
       {navItems.map((item) => (
         <Link
           key={item.name}
           href={item.href}
-          className={`z-10 w-fit cursor-pointer transition-all hover:pl-2 ${route === item.href ? "underline " : ""}`}
+          className={`z-10 w-fit cursor-pointer transition-all md:hover:pl-2 ${route === item.href ? "underline " : ""}`}
         >
           <p>{item.name}</p>
         </Link>

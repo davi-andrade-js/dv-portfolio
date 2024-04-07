@@ -9,16 +9,16 @@ export default function Resume() {
 
   return (
     <Link
-      className="flex w-fit flex-row transition-all"
+      className="flex h-fit w-fit flex-row transition-all"
       href="/downloads/Currículo Davi Andrade.pdf"
       target="_blank"
       rel="noreferrer"
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
     >
-      <p>Currículo</p>
+      <p className="text-sm md:text-base">Currículo</p>
       <ArrowUpRight
-        className={`ml-1 w-3 transition-all md:w-4 ${onHover && "pb-2"}`}
+        className={`ml-1 h-fit w-3 transition-all md:h-auto md:w-4 ${onHover && "pb-2"}`}
       />
     </Link>
   );

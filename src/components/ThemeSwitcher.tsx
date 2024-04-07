@@ -6,7 +6,6 @@ import { Sun } from "lucide-react";
 
 export default function ThemeSwitcher() {
   const [theme, setTheme] = useState("");
-  const [bgOnHover, setBgOnHover] = useState(false);
 
   useEffect(() => {
     setTheme(localStorage.theme);
@@ -34,22 +33,16 @@ export default function ThemeSwitcher() {
 
   return (
     <>
-      <div className="z-10 cursor-pointer">
+      <div className="z-10 h-fit cursor-pointer">
         {theme === "light" ? (
           <Moon
-            className={`w-fit hover:text-neutral-500 `}
+            className={`h-fit w-5 transition-all hover:text-neutral-500 md:w-6 `}
             onClick={() => setDarkMode()}
-            onMouseEnter={() => setBgOnHover(true)}
-            onMouseLeave={() => setBgOnHover(false)}
           />
         ) : (
-          // ${bgOnHover ? "rounded-full bg-stone-950 bg-opacity-15" : ""}
-          // ${bgOnHover ? "rounded-full bg-stone-50 bg-opacity-20" : ""}
           <Sun
-            className={`w-fit hover:text-neutral-500 `}
+            className={`h-fit w-fit transition-all hover:text-neutral-500 `}
             onClick={() => setLightMode()}
-            onMouseEnter={() => setBgOnHover(true)}
-            onMouseLeave={() => setBgOnHover(false)}
           />
         )}
       </div>

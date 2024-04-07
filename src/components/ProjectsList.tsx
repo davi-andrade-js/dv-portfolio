@@ -84,7 +84,7 @@ export default function ProjectsList() {
 
   return (
     <>
-      <div className="font-poppinsRegular flex h-full w-full flex-row overflow-hidden pt-3 md:w-3/5 md:pt-0 lg:items-end lg:justify-end ">
+      <div className="font-poppinsRegular mt-6 flex h-full w-full flex-row overflow-hidden md:w-3/5 md:pt-0 lg:items-end lg:justify-end ">
         <ScrollArea className="h-full md:w-3/4 md:pr-4">
           <div className="flex flex-col space-y-4 md:space-y-5">
             {projects.map((project) => (
@@ -105,13 +105,15 @@ export default function ProjectsList() {
                   onMouseEnter={() => setProjectOnHover(project.name)}
                   onMouseLeave={() => setProjectOnHover("")}
                 >
-                  <div className=" flex w-full flex-col items-end justify-between space-y-3 transition-all  md:w-[90%] md:space-y-4">
+                  <div className=" flex w-full flex-col items-end justify-between space-y-2 transition-all  md:w-[90%] md:space-y-4">
                     <div className="flex w-full flex-col items-end transition-all">
                       <header className="font-poppinsMedium flex w-full flex-row justify-between">
                         <div className="text-sm md:text-base">
                           {project.year}
                         </div>
-                        <div className="flex md:text-lg">{project.name}</div>
+                        <div className="flex text-sm md:text-lg">
+                          {project.name}
+                        </div>
                       </header>
 
                       <div className="text-secondary text-right text-xs transition-all md:text-base">
@@ -119,7 +121,7 @@ export default function ProjectsList() {
                       </div>
                     </div>
 
-                    <div className="flex flex-row flex-wrap justify-end gap-2">
+                    <div className="flex flex-row flex-wrap justify-end gap-1 md:gap-2">
                       {project.technologies.map((tech) => (
                         <div key={tech}>
                           <Badge className="badge transition-all md:text-xs">
@@ -133,10 +135,10 @@ export default function ProjectsList() {
                       {project.repositoryUrl ? (
                         <>
                           <Link
+                            className="flex cursor-pointer flex-row text-right text-xs  md:text-base"
                             href={project.repositoryUrl}
                             target="_blank"
                             rel="noreferrer"
-                            className="flex cursor-pointer flex-row text-right text-xs  md:text-base"
                             onMouseEnter={() => setLinkOnHover("repository")}
                             onMouseLeave={() => setLinkOnHover("")}
                           >
