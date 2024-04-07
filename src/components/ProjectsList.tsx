@@ -84,7 +84,7 @@ export default function ProjectsList() {
 
   return (
     <>
-      <div className="font-poppinsRegular mt-6 flex h-full w-full flex-row overflow-hidden md:w-3/5 md:pt-0 lg:items-end lg:justify-end ">
+      <div className="font-poppinsRegular mt-6 flex h-full w-full flex-row items-end justify-end overflow-hidden md:mt-0 md:pt-0 lg:w-3/5 ">
         <ScrollArea className="h-full md:w-3/4 md:pr-4">
           <div className="flex flex-col space-y-4 md:space-y-5">
             {projects.map((project) => (
