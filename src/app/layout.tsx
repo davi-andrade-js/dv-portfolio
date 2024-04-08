@@ -25,8 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link rel="canonical" href="https://dv-portfolio-three.vercel.app" />
-        <meta name="robots" content="noindex" />
+        <link rel="canonical" href="https://dv-portfolio-three.vercel.app/" />
+        <meta
+          name="google-site-verification"
+          content="Uckv1OhzImYml5YSpTMR2O6GXx9VW7t4XZvL-48vasQ"
+        />
+        <meta name="robots" content="index" />
         <meta
           http-equiv="Content-Security-Policy"
           content="default-src 'self'; img-src https://*; child-src 'none';"

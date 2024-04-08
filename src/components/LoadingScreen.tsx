@@ -23,11 +23,11 @@ export default function LoadingScreen() {
           visible ? "flex" : "hidden"
         } ${fadeOut && "opacity-0"}`}
       >
-        <h1
+        <p
           className={`text-glow flex text-2xl text-white${!visible && "hidden"}`}
         >
           Davi Andrade
-        </h1>
+        </p>
       </div>
     </>
   );
