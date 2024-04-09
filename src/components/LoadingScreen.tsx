@@ -19,7 +19,7 @@ export default function LoadingScreen() {
   return (
     <>
       <div
-        className={`-col absolute left-0 top-0 z-50 h-screen w-screen items-center justify-center  bg-zinc-300 transition-all duration-700 ${
+        className={`absolute left-0 top-0 z-50 h-screen w-screen items-center justify-center  bg-zinc-300 transition-all duration-700 ${
           visible ? "flex" : "hidden"
         } ${fadeOut && "opacity-0"}`}
       >

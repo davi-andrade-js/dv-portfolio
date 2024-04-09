@@ -8,9 +8,11 @@ import ThemeSwitcher from "./ThemeSwitcher";
 export default function Header() {
   return (
     <header className="font-poppinsRegular mb-8 flex w-full flex-row justify-between">
-      <div className="z-10 flex h-fit cursor-default flex-col transition-all">
-        <h1 className="text-2xl transition-all md:text-6xl">Davi Andrade</h1>
-        <h2 className=" text-sm transition-all md:text-2xl">
+      <div className="z-10">
+        <Link href={"/"} className="h-fit cursor-pointer transition-all">
+          <h1 className="text-2xl transition-all md:text-6xl">Davi Andrade</h1>
+        </Link>
+        <h2 className="cursor-default text-sm transition-all md:text-2xl">
           Desenvolvedor FrontEnd
         </h2>
       </div>

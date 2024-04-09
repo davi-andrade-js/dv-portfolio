@@ -37,13 +37,13 @@ export default function Info() {
 
   return (
     <>
-      <main className="md flex h-full flex-col justify-end md:flex-row md:justify-between">
+      <main className="fadeIn flex h-full flex-col justify-end md:flex-row md:justify-between">
         <div className="font-poppinsRegular z-10 flex h-fit flex-col items-end justify-end space-y-4 text-base transition-all md:w-72 md:space-y-6">
           {skills.map((skill) => (
             <div key={skill.name} className="space-y-2 transition-all">
-              <h1 className="font-poppinsMedium text-end text-sm transition-all md:text-lg">
+              <h3 className="font-poppinsMedium text-end text-sm transition-all md:text-lg">
                 {skill.name}
-              </h1>
+              </h3>
               <div className="flex h-fit flex-row flex-wrap justify-end gap-1 md:gap-2">
                 {skill.techs.map((tech) => (
                   <div key={tech}>

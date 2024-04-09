@@ -11,7 +11,7 @@ export default function Resume() {
 
   return (
     <Link
-      className={`flex h-fit w-fit flex-row transition-all ${route === "/" && "badge rounded-full px-2"}`}
+      className={`flex h-fit w-fit flex-row items-center transition-all ${route === "/" && "badge rounded-full px-2"}`}
       href="/downloads/Currículo Davi Andrade.pdf"
       target="_blank"
       rel="noreferrer"

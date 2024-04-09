@@ -18,6 +18,7 @@ export default function ProjectsList() {
       name: "Davi Andrade",
       description: "Portfólio pessoal.",
       screenshot: "/images/portfolio.png",
+      alt: "Página inicial do portfólio com navbar, texto de apresentação e links de redirecionamento.",
       repositoryUrl: "https://github.com/davi-andrade-js/dv-portfolio",
       liveUrl: "",
       technologies: [
@@ -34,6 +35,7 @@ export default function ProjectsList() {
       description:
         "Ferramenta de IA com geração de textos, imagens, vídeos, áudio e código.",
       screenshot: "/images/thinker.png",
+      alt: "Dashboard com navbar e opções de geração.",
       repositoryUrl: "https://github.com/davi-andrade-js/Thinker-AI",
       liveUrl: "https://thinker-pmm0suqah-davis-projects-820de78a.vercel.app/",
       technologies: [
@@ -51,6 +53,7 @@ export default function ProjectsList() {
       name: "Player de Música Retrô",
       description: "Player de música inspirado no visual do Windows 95.",
       screenshot: "/images/music-player.png",
+      alt: "Tela inicial com o modal do player de música aberto.",
       repositoryUrl: "https://github.com/davi-andrade-js/Retro-Music-Player",
       liveUrl: "https://davi-andrade-js.github.io/Retro-Music-Player/",
       technologies: ["JavaScript Vanilla", "HTML", "CSS"],
@@ -60,6 +63,7 @@ export default function ProjectsList() {
       name: "Calc.js",
       description: "Simples calculadora.",
       screenshot: "/images/calc.png",
+      alt: "Tela estática com a calculadora.",
       repositoryUrl: "https://github.com/davi-andrade-js/Calc.js",
       liveUrl: "https://davi-andrade-js.github.io/Calc.js/",
       technologies: ["JavaScript Vanilla", "HTML", "CSS"],
@@ -84,16 +88,16 @@ export default function ProjectsList() {
 
   return (
     <>
-      <div className="font-poppinsRegular mt-6 flex h-full w-full flex-row items-end justify-end overflow-hidden md:mt-0 md:pt-0 lg:w-3/5 ">
+      <div className="fadeIn font-poppinsRegular mt-8 flex h-full w-full flex-row items-end justify-end overflow-hidden md:mt-0 md:pt-0 lg:w-3/5 ">
         <ScrollArea className="h-full md:w-3/4 md:pr-4">
-          <div className="flex flex-col space-y-4 md:space-y-5">
+          <div className="flex flex-col space-y-2 md:space-y-5">
             {projects.map((project) => (
               <>
                 {projects.indexOf(project) !== 0 ? (
                   <div
                     key={project.name}
                     className={
-                      "badge w-full border border-transparent transition-all"
+                      "badge w-full border-transparent transition-all md:border"
                     }
                   ></div>
                 ) : (
@@ -101,7 +105,7 @@ export default function ProjectsList() {
                 )}
 
                 <div
-                  className={`trasition-all flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl md:p-2 ${projectOnHover === project.name ? "card" : ""}`}
+                  className="card md:card-none md:hover:card flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl p-2 duration-150"
                   onMouseEnter={() => setProjectOnHover(project.name)}
                   onMouseLeave={() => setProjectOnHover("")}
                 >
@@ -135,7 +139,7 @@ export default function ProjectsList() {
                       {project.repositoryUrl ? (
                         <>
                           <Link
-                            className="flex cursor-pointer flex-row text-right text-xs  md:text-base"
+                            className="flex cursor-pointer flex-row items-center text-right text-xs md:text-base"
                             href={project.repositoryUrl}
                             target="_blank"
                             rel="noreferrer"
@@ -154,14 +158,16 @@ export default function ProjectsList() {
                           </Link>
                         </>
                       ) : (
-                        <p>Em breve...</p>
+                        <p className="text-xs transition-all md:text-base">
+                          Em breve...
+                        </p>
                       )}
                       {project.liveUrl ? (
                         <Link
                           href={project.liveUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex cursor-pointer flex-row text-right text-xs md:text-base"
+                          className="flex cursor-pointer flex-row items-center text-right text-xs md:text-base"
                           onMouseEnter={() => setLinkOnHover("live")}
                           onMouseLeave={() => setLinkOnHover("")}
                         >
@@ -186,8 +192,9 @@ export default function ProjectsList() {
                       key={project.screenshot}
                       src={project.screenshot}
                       alt="Preview do projeto"
+                      loading="eager"
                       width={200}
-                      height={200}
+                      height={100}
                       className="rounded-lg border-2 border-zinc-400"
                     />
                   </div>
