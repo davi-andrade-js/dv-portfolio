@@ -155,18 +155,10 @@ body {
 }
 
 .bg-shape1 {
-  width: 800px;
-  height: 800px;
-  border-radius: 9999px;
-  position: relative;
   animation: one 8s infinite linear;
 }
 
 .bg-shape2 {
-  width: 800px;
-  height: 800px;
-  border-radius: 9999px;
-  position: relative;
   animation: two 15s infinite linear;
 }
 
@@ -183,134 +175,137 @@ body {
   }
 }
 
-/* TODO: tornar responsivo */
 @keyframes one {
   0% {
-    left: -350px;
-    top: -400px;
+    left: -20vw;
+    top: -45vh;
   }
   10% {
-    left: -350px;
-    top: 300px;
+    left: -20vw;
+    top: 35vh;
   }
   20% {
-    left: 200px;
-    top: 300px;
+    left: 20vw;
+    top: 35vh;
   }
   30% {
-    left: 1000px;
-    top: 300px;
+    left: 65vw;
+    top: 35vh;
   }
   40% {
-    left: 1000px;
-    top: -400px;
+    left: 65vw;
+    top: -45vh;
   }
   50% {
-    left: 300px;
-    top: -400px;
+    left: 35vw;
+    top: -45vh;
   }
   60% {
-    left: -350px;
-    top: -400px;
+    left: -20vw;
+    top: -45vh;
   }
   70% {
     left: 0px;
-    top: 300px;
+    top: 35vh;
   }
   80% {
-    left: 600px;
-    top: 300px;
+    left: 45vw;
+    top: 35vh;
   }
   90% {
-    left: 200px;
-    top: -200px;
+    left: 20vw;
+    top: -20vh;
   }
   100% {
-    left: -350px;
-    top: -400px;
+    left: -20vw;
+    top: -45vh;
   }
 }
 
 @keyframes two {
   0% {
-    left: 300px;
-    top: -350px;
+    left: 65vw;
+    top: -45vh;
   }
   5% {
-    left: 300px;
-    top: 200px;
+    left: 65vw;
+    top: 35vh;
   }
   10% {
-    left: -200px;
-    top: 250px;
+    left: 30vw;
+    top: 35vh;
   }
   15% {
-    left: -1000px;
-    top: 250px;
+    left: -10vw;
+    top: 35vh;
   }
   20% {
-    left: -1000px;
-    top: -350px;
+    left: -20vw;
+    top: -45vh;
   }
   25% {
-    left: -400px;
-    top: -350px;
+    left: 10vw;
+    top: -45vh;
   }
   30% {
-    left: 100px;
-    top: 250px;
+    left: 40vw;
+    top: 0vh;
   }
   35% {
-    left: 300px;
-    top: 250px;
+    left: 65vw;
+    top: 35vh;
   }
   40% {
-    left: 300px;
-    top: -350px;
+    left: 65vw;
+    top: -45vh;
   }
   45% {
-    left: -300px;
-    top: -350px;
+    left: 40vw;
+    top: -45vh;
   }
   50% {
-    left: -1000px;
-    top: -350px;
+    left: 10vw;
+    top: -45vh;
   }
   55% {
-    left: -1000px;
-    top: 250px;
+    left: -20vw;
+    top: -45vh;
   }
   60% {
-    left: -400px;
-    top: 250px;
+    left: -20vw;
+    top: 35vh;
   }
   65% {
-    left: 100px;
-    top: 0px;
+    left: 10vw;
+    top: 35vh;
   }
   70% {
-    left: -300px;
-    top: -350px;
+    left: 40vw;
+    top: 35vh;
   }
   75% {
-    left: -1000px;
-    top: -350px;
+    left: 65vw;
+    top: 35vh;
   }
   80% {
-    left: -1000px;
-    top: 250px;
+    left: 65vw;
+    top: -45vh;
   }
   85% {
-    left: -300px;
-    top: 250px;
+    left: 30vw;
+    top: -45vh;
   }
   90% {
-    left: 300px;
-    top: 250px;
+    left: 55vw;
+    top: -0vh;
+  }
+  95% {
+    left: 65vw;
+    top: 35vh;
   }
   100% {
-    left: 300px;
-    top: -350px;
+    left: 65vw;
+    top: -45vh;
   }
 }
 
