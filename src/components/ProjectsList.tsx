@@ -88,120 +88,116 @@ export default function ProjectsList() {
 
   return (
     <>
-      <div className="fadeIn font-poppinsRegular mt-8 flex h-full w-full flex-row items-end justify-end overflow-hidden md:mt-0 md:pt-0 lg:w-3/5 ">
+      <div className="fadeIn font-poppinsRegular mt-8 flex h-full w-full flex-row items-end justify-end overflow-hidden md:mt-0 md:pt-0 lg:w-3/5">
         <ScrollArea className="h-full md:w-3/4 md:pr-4">
-          <div className="flex flex-col space-y-2 md:space-y-5">
-            {projects.map((project) => (
-              <>
-                {projects.indexOf(project) !== 0 ? (
-                  <div
-                    key={project.name}
-                    className={
-                      "badge w-full border-transparent transition-all md:border"
-                    }
-                  ></div>
-                ) : (
-                  <></>
-                )}
-
+          {projects.map((project) => (
+            <div className="flex flex-col" key={project.name}>
+              {projects.indexOf(project) !== 0 ? (
                 <div
-                  className="card md:card-none md:hover:card flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl p-2 duration-150"
-                  onMouseEnter={() => setProjectOnHover(project.name)}
-                  onMouseLeave={() => setProjectOnHover("")}
-                >
-                  <div className=" flex w-full flex-col items-end justify-between space-y-2 transition-all  md:w-[90%] md:space-y-4">
-                    <div className="flex w-full flex-col items-end transition-all">
-                      <header className="font-poppinsMedium flex w-full flex-row justify-between">
-                        <div className="text-sm md:text-base">
-                          {project.year}
-                        </div>
-                        <div className="flex text-sm md:text-lg">
-                          {project.name}
-                        </div>
-                      </header>
+                  key={project.name}
+                  className={
+                    "badge m-2 w-full border-transparent md:my-5 md:border"
+                  }
+                ></div>
+              ) : (
+                <></>
+              )}
 
-                      <div className="text-secondary text-right text-xs transition-all md:text-base">
-                        <p className="transition-all">{project.description}</p>
+              <div
+                className="card md:card-none md:hover:card flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl p-2 transition-all"
+                onMouseEnter={() => setProjectOnHover(project.name)}
+                onMouseLeave={() => setProjectOnHover("")}
+              >
+                <div className=" flex w-full flex-col items-end justify-between space-y-2  md:w-[90%] md:space-y-4">
+                  <div className="flex w-full flex-col items-end transition-all">
+                    <header className="font-poppinsMedium flex w-full flex-row justify-between">
+                      <div className="text-sm md:text-base">{project.year}</div>
+                      <div className="flex text-end text-sm md:text-lg">
+                        {project.name}
                       </div>
-                    </div>
+                    </header>
 
-                    <div className="flex flex-row flex-wrap justify-end gap-1 md:gap-2">
-                      {project.technologies.map((tech) => (
-                        <div key={tech}>
-                          <Badge className="badge transition-all md:text-xs">
-                            <p className="transition-all">{tech}</p>
-                          </Badge>
-                        </div>
-                      ))}
+                    <div className="text-secondary text-right text-xs transition-all md:text-base">
+                      <p className="transition-all">{project.description}</p>
                     </div>
+                  </div>
 
-                    <div className="flex flex-row space-x-3 ">
-                      {project.repositoryUrl ? (
-                        <>
-                          <Link
-                            className="flex cursor-pointer flex-row items-center text-right text-xs md:text-base"
-                            href={project.repositoryUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            onMouseEnter={() => setLinkOnHover("repository")}
-                            onMouseLeave={() => setLinkOnHover("")}
-                          >
-                            <p className="transition-all">Repositório</p>
-                            <ArrowUpRight
-                              className={`ml-1 h-fit w-3 transition-all md:h-auto md:w-4  ${
-                                linkOnHover === "repository" &&
-                                projectOnHover === project.name
-                                  ? "pb-2"
-                                  : ""
-                              }`}
-                            />
-                          </Link>
-                        </>
-                      ) : (
-                        <p className="text-xs transition-all md:text-base">
-                          Em breve...
-                        </p>
-                      )}
-                      {project.liveUrl ? (
+                  <div className="flex flex-row flex-wrap justify-end gap-1 md:gap-2">
+                    {project.technologies.map((tech) => (
+                      <div key={tech}>
+                        <Badge className="badge transition-all md:text-xs">
+                          <p className="transition-all">{tech}</p>
+                        </Badge>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-row space-x-3 ">
+                    {project.repositoryUrl ? (
+                      <>
                         <Link
-                          href={project.liveUrl}
+                          className="flex cursor-pointer flex-row items-center text-right text-xs md:text-base"
+                          href={project.repositoryUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex cursor-pointer flex-row items-center text-right text-xs md:text-base"
-                          onMouseEnter={() => setLinkOnHover("live")}
+                          onMouseEnter={() => setLinkOnHover("repository")}
                           onMouseLeave={() => setLinkOnHover("")}
                         >
-                          <p className="transition-all">Website</p>
+                          <p className="transition-all">Repositório</p>
                           <ArrowUpRight
-                            className={`ml-1 h-fit w-3 transition-all md:h-auto md:w-4 ${
-                              linkOnHover === "live" &&
+                            className={`ml-1 h-fit w-3 transition-all md:h-auto md:w-4  ${
+                              linkOnHover === "repository" &&
                               projectOnHover === project.name
                                 ? "pb-2"
                                 : ""
                             }`}
                           />
                         </Link>
-                      ) : (
-                        <></>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="hidden w-fit md:block">
-                    <Image
-                      key={project.screenshot}
-                      src={project.screenshot}
-                      alt="Preview do projeto"
-                      loading="eager"
-                      width={200}
-                      height={100}
-                      className="rounded-lg border-2 border-zinc-400"
-                    />
+                      </>
+                    ) : (
+                      <p className="text-xs transition-all md:text-base">
+                        Em breve...
+                      </p>
+                    )}
+                    {project.liveUrl ? (
+                      <Link
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex cursor-pointer flex-row items-center text-right text-xs md:text-base"
+                        onMouseEnter={() => setLinkOnHover("live")}
+                        onMouseLeave={() => setLinkOnHover("")}
+                      >
+                        <p className="transition-all">Website</p>
+                        <ArrowUpRight
+                          className={`ml-1 h-fit w-3 transition-all md:h-auto md:w-4 ${
+                            linkOnHover === "live" &&
+                            projectOnHover === project.name
+                              ? "pb-2"
+                              : ""
+                          }`}
+                        />
+                      </Link>
+                    ) : (
+                      <></>
+                    )}
                   </div>
                 </div>
-              </>
-            ))}
-          </div>
+
+                <div className="hidden w-fit md:block">
+                  <Image
+                    key={project.screenshot}
+                    src={project.screenshot}
+                    alt="Preview do projeto"
+                    loading="eager"
+                    width={200}
+                    height={100}
+                    className="rounded-lg border-2 border-zinc-400"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
         </ScrollArea>
       </div>
     </>
