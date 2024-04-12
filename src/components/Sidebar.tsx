@@ -31,7 +31,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <nav className="font-poppinsMedium flex w-24 flex-col space-y-4 text-sm transition-all md:space-y-5 md:text-base">
+    <nav className="font-poppinsMedium flex w-24 flex-col space-y-4 text-base transition-all md:space-y-5">
       {navItems.map((item) => (
         <Link
           key={item.name}

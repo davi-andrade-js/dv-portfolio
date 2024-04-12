@@ -4,9 +4,9 @@ import Resume from "@/components/Resume";
 export default function Home() {
   return (
     <>
-      <article className="fadeIn font-poppinsRegular z-10 flex cursor-default flex-col items-end space-y-3 text-end text-sm transition-all md:h-full md:text-base">
-        <p className="w-36 transition-all md:w-40">
-          {`Desenvolvedor Web e Graduando em Análise e Desenvolvimento de Sistemas. Antes do meu primeiro "Hello World", fiz trabalhos voluntários e estive engajado no protagonismo estudantil durante o ensino médio.`}
+      <article className="fadeIn font-poppinsRegular z-10 flex cursor-default flex-col items-end space-y-3 text-end text-base transition-all md:h-full">
+        <p className="w-40 transition-all">
+          {`Oi! Sou um Desenvolvedor Web Front-End. Acredito que um software deve ser inspirador, funcional e, sobretudo, prezar pela experiência do usuário.`}
         </p>
         <Resume />
       </article>

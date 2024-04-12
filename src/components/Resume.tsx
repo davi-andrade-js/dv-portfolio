@@ -18,7 +18,7 @@ export default function Resume() {
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
     >
-      <p className="text-sm transition-all md:text-base">Currículo</p>
+      <p className="text-base transition-all">Currículo</p>
       <ArrowUpRight
         className={`ml-1 h-fit w-3 transition-all md:h-auto md:w-4 ${onHover && "pb-2"}`}
       />

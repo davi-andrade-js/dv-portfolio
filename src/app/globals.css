@@ -95,8 +95,8 @@ body {
     --secondary: rgb(68 64 60);
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --light-one-bg: rgba(138, 17, 203, 0.9);
-    --light-two-bg: rgba(19, 82, 201, 0.9);
+    --light-one-bg: rgba(148, 0, 211, 0.9);
+    --light-two-bg: rgba(0, 70, 201, 0.9);
 
     --badge-background: black;
     --card-background: rgba(255, 255, 255, 0.5);
