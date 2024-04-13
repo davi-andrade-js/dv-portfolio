@@ -24,14 +24,7 @@ export default function Info() {
     },
     {
       name: "No-code",
-      techs: [
-        "Inglês fluente",
-        "Comunicação",
-        "Resolução de problemas",
-        "Trabalho em equipe",
-        "Raciocínio lógico",
-        "Microsoft 365",
-      ],
+      techs: ["Inglês fluente", "Microsoft 365", "Google Workspace", "GitHub"],
     },
   ];
 
