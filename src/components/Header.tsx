@@ -8,7 +8,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 export default function Header() {
   return (
     <header className="font-poppinsRegular mb-6 flex w-full flex-row justify-between md:mb-8">
-      <div className="z-10 transition-all">
+      <div className="title-color z-10 transition-all">
         <Link href={"/"} className="h-fit cursor-pointer">
           <h1 className="text-3xl transition-all md:text-6xl">Davi Andrade</h1>
         </Link>

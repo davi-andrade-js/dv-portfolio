@@ -22,6 +22,104 @@
   font-family: "Poppins Medium";
 }
 
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --title-color: #f1f7ed;
+
+    --secondary: rgb(211, 206, 201);
+    --secondary-foreground: 210 40% 98%;
+
+    --light-one-bg: rgba(138, 17, 203, 0.9);
+    --light-two-bg: rgba(29, 108, 255, 0.9);
+
+    --badge-background: rgba(241, 247, 237);
+    --badge-text: rgb(4, 13, 34);
+    --card-background: rgba(8, 19, 55, 0.5);
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .light {
+    --background: 0 0% 92%;
+    --foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --title-color: #040d22;
+
+    --secondary: rgb(68 64 60);
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --light-one-bg: rgb(109, 14, 170);
+    --light-two-bg: rgba(0, 70, 201, 1);
+
+    --badge-background: rgba(4, 13, 34);
+    --badge-text: rgb(241, 255, 245);
+    --card-background: rgba(255, 255, 255, 0.5);
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .card {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  .card-none {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .light-one {
+    background-color: var(--light-one-bg);
+  }
+
+  .light-two {
+    background-color: var(--light-two-bg);
+  }
+
+  /* .nav {
+    @apply relative tracking-[1px];
+  }
+
+  .nav::after {
+    @apply absolute -bottom-[0px] left-0 h-[3px] w-[0%] rounded-xl bg-zinc-800 duration-300 content-[''];
+  }
+
+  .nav:hover::after {
+    @apply w-[100%];
+  } */
+}
+
 body {
   transition: background-color 0.15s;
 }
@@ -36,11 +134,11 @@ body {
 }
 
 .animate-bg {
-  animation: buttonBackground 0.5s ease forwards; /* Definir a animação */
+  animation: buttonBackground 0.5s ease forwards;
 }
 
 .animate-bg.active {
-  animation-play-state: running; /* Iniciar a animação */
+  animation-play-state: running;
 }
 
 .text-glow {
@@ -68,74 +166,21 @@ body {
   }
 }
 
-@layer base {
-  :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+.badge-text {
+  color: var(--badge-text);
+}
 
-    --high-contrast: rgb(0, 0, 0);
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: rgb(211, 206, 201);
-    --secondary-foreground: 210 40% 98%;
-
-    --light-one-bg: rgba(138, 17, 203, 0.9);
-    --light-two-bg: rgba(29, 108, 255, 0.9);
-
-    --badge-background: white;
-    --card-background: rgba(8, 19, 55, 0.5);
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-
-    --radius: 0.5rem;
-  }
-
-  .light {
-    --background: 0 0% 92%;
-    --foreground: 222.2 84% 4.9%;
-
-    --high-contrast: rgb(255 255 255);
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: rgb(68 64 60);
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --light-one-bg: rgba(148, 0, 211, 0.9);
-    --light-two-bg: rgba(0, 70, 201, 0.9);
-
-    --badge-background: black;
-    --card-background: rgba(255, 255, 255, 0.5);
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-  }
+.title-color {
+  color: var(--title-color);
 }
 
 .badge {
   background-color: var(--badge-background);
-  color: var(--high-contrast);
+  color: var(--badge-text);
 }
 
 .text-secondary {
   color: var(--secondary);
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }
 
 .motion-area {
@@ -151,7 +196,7 @@ body {
   filter: blur(90px);
 }
 
-.noise::before {
+/* .noise::before {
   position: fixed;
   top: 0;
   left: 0;
@@ -162,7 +207,7 @@ body {
   z-index: 1000;
   pointer-events: none;
   background: url(/images/noise.gif);
-}
+} */
 
 .fadeIn {
   animation: fadeIn 0.75s;
@@ -317,48 +362,4 @@ body {
     left: 65vw;
     top: -45vh;
   }
-}
-
-.bg-teal {
-  background-color: rgba(138, 17, 203, 0.9);
-}
-
-.bg-primary {
-  background-color: rgba(29, 108, 255, 0.9);
-}
-
-@layer utilities {
-  .card {
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-  }
-
-  .card-none {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .light-one {
-    background-color: var(--light-one-bg);
-  }
-
-  .light-two {
-    background-color: var(--light-two-bg);
-  }
-
-  /* .nav {
-    @apply relative tracking-[1px];
-  }
-
-  .nav::after {
-    @apply absolute -bottom-[0px] left-0 h-[3px] w-[0%] rounded-xl bg-zinc-800 duration-300 content-[''];
-  }
-
-  .nav:hover::after {
-    @apply w-[100%];
-  } */
 }
