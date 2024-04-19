@@ -6,6 +6,7 @@ import { Sun } from "lucide-react";
 
 export default function ThemeSwitcher() {
   const [theme, setTheme] = useState("");
+  const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
     setTheme(localStorage.theme);
@@ -36,20 +37,20 @@ export default function ThemeSwitcher() {
       <div className="z-10 h-fit cursor-pointer">
         {theme === "light" ? (
           <Moon
-            className={`h-fit w-7 transition-all hover:text-neutral-500 md:w-6 `}
-            onClick={() => setDarkMode()}
+            className={`animate-bg h-7 w-7 rounded-full transition-all md:animate-none md:hover:text-neutral-500 ${clicked && "active"}`}
+            onClick={() => {
+              setDarkMode(), setClicked(true);
+            }}
           />
         ) : (
           <Sun
-            className={`h-fit w-7 transition-all hover:text-neutral-500 `}
-            onClick={() => setLightMode()}
+            className={`animate-bg h-7 w-7 rounded-full transition-all md:animate-none md:hover:text-neutral-500 ${clicked && "active"}`}
+            onClick={() => {
+              setLightMode(), setClicked(true);
+            }}
           />
         )}
       </div>
     </>
   );
 }
-
-// toast(
-//   `🌚 Esta é a versão beta. Troca de tema ainda não foi implementada.`,
-// );

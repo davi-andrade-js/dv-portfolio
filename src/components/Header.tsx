@@ -26,16 +26,16 @@ export default function Header() {
             target="_blank"
             rel="noreferrer"
           >
-            <Github className="h-7 w-7 cursor-pointer transition-all hover:text-neutral-500" />
+            <Github className="h-7 w-7 cursor-pointer transition-all md:hover:text-neutral-500" />
           </Link>
           <Link
-            className="h-fit"
+            className="h-fit w-full"
             key={"LinkedIn"}
             href={"https://www.linkedin.com/in/andrade-davi/"}
             target="_blank"
             rel="noreferrer"
           >
-            <Linkedin className="h-7 w-7 cursor-pointer transition-all hover:text-neutral-500" />
+            <Linkedin className="h-7 w-7 cursor-pointer transition-all md:hover:text-neutral-500" />
           </Link>
         </div>
 

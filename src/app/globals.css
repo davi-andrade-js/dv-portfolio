@@ -26,11 +26,22 @@ body {
   transition: background-color 0.15s;
 }
 
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
+@keyframes buttonBackground {
+  from {
+    background-color: var(--card-background);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.animate-bg {
+  animation: buttonBackground 0.5s ease forwards; /* Definir a animação */
+}
+
+.animate-bg.active {
+  animation-play-state: running; /* Iniciar a animação */
+}
 
 .text-glow {
   background: linear-gradient(
@@ -130,7 +141,6 @@ body {
 .motion-area {
   overflow: hidden;
   position: absolute;
-  /* margin: 32px !important; */
   inset: 0;
   justify-content: center;
   display: inline-flex;
