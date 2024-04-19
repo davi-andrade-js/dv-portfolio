@@ -28,7 +28,7 @@ export default function LoadingScreen() {
         >
           Davi Andrade
         </p>
-        <footer className="text-center text-neutral-950">
+        <footer className="pb-2 text-center text-neutral-950">
           <p>2024 &copy; Todos os direitos reservados.</p>
         </footer>
       </div>
