@@ -19,9 +19,9 @@ export default function Sidebar() {
       section: "projects",
     },
     {
-      name: "Sobre",
-      href: "/info",
-      section: "info",
+      name: "Habilidades",
+      href: "/skills",
+      section: "skills",
     },
     {
       name: "Contato",

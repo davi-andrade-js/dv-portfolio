@@ -1,5 +1,5 @@
 import React from "react";
-import Resume from "@/components/Resume";
+import DownloadResumeBtn from "@/components/DownloadResumeBtn";
 
 export default function Home() {
   return (
@@ -8,7 +8,8 @@ export default function Home() {
         <p className="w-40 transition-all">
           {`Oi! Sou um Desenvolvedor Web Front-End. Acredito que um software deve ser inspirador, funcional e, sobretudo, prezar pela experiência do usuário.`}
         </p>
-        <Resume />
+
+        <DownloadResumeBtn />
       </article>
     </>
   );
