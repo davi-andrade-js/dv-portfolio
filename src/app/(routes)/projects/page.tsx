@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import ProjectsLink from "../../../components/ProjectsLink";
 import { Star } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -10,20 +10,6 @@ import { projects } from "../../../components/projects";
 
 export default function ProjectsList() {
   const [projectOnHover, setProjectOnHover] = React.useState("");
-
-  projects.sort(function (a, b) {
-    let x = a.pinned;
-    let y = b.pinned;
-
-    if (x === true) {
-      return -1;
-    }
-    if (x === false) {
-      return 1;
-    }
-
-    return 0;
-  });
 
   return (
     <>
@@ -60,7 +46,7 @@ export default function ProjectsList() {
                         ) : (
                           <></>
                         )}
-                        <p className=" text-base">{project.year}</p>
+                        <div className=" text-base">{project.year}</div>
                       </div>
 
                       <div className="flex text-end text-lg">
