@@ -16,6 +16,21 @@ export const projects = [
     year: "2024",
   },
   {
+    name: "Weather App",
+    description: "Aplicação de clima e tempo com a API OpenWeather.",
+    screenshot: "/images/weather.webp",
+    repositoryUrl: "https://github.com/davi-andrade-js/weather-app",
+    liveUrl: "https://weather-app-nu-roan.vercel.app/",
+    technologies: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "OpenWeatherAPI",
+    ],
+    year: "2024",
+  },
+  {
     name: "Thinker AI",
     description:
       "Ferramenta de IA com geração de textos, imagens, vídeos, áudio e código.",
@@ -53,20 +68,5 @@ export const projects = [
     liveUrl: "https://davi-andrade-js.github.io/Calc.js/",
     technologies: ["JavaScript", "HTML", "CSS"],
     year: "2023",
-  },
-  {
-    name: "Weather App",
-    description: "Aplicação de clima e tempo com a API OpenWeather.",
-    screenshot: "/images/weather.webp",
-    repositoryUrl: "",
-    liveUrl: "",
-    technologies: [
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "OpenWeatherAPI",
-    ],
-    year: "2024",
   },
 ];
