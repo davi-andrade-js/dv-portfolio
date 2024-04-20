@@ -41,15 +41,16 @@ export default function ProjectsList() {
               ) : (
                 <></>
               )}
+
               <div
-                className="card md:card-none md:hover:card flex h-fit w-full cursor-default flex-row space-x-5 rounded-xl p-4 transition-all md:p-2"
+                className="card md:card-none md:hover:card md: flex h-fit w-full cursor-default flex-col items-end space-x-5 space-y-3 rounded-xl p-4 transition-all md:flex-row md:items-start md:space-y-0 md:p-2"
                 onMouseEnter={() => setProjectOnHover(project.name)}
                 onMouseLeave={() => setProjectOnHover("")}
               >
                 <div className=" flex w-full flex-col items-end justify-between space-y-2  md:w-[90%] md:space-y-4">
                   <div className="flex w-full flex-col items-end transition-all">
                     <header className="font-poppinsMedium flex w-full flex-row justify-between">
-                      <div className="flex flex-row items-center space-x-3 md:space-x-5">
+                      <div className="flex flex-row items-center space-x-3">
                         {project.pinned ? (
                           <Star
                             className="h-4 w-4 md:h-5 md:w-5"
@@ -91,7 +92,7 @@ export default function ProjectsList() {
                   />
                 </div>
 
-                <div className="hidden w-fit md:block">
+                <div className="w-fit">
                   <Image
                     key={project.screenshot}
                     src={project.screenshot}
