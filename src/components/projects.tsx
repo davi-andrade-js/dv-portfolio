@@ -65,7 +65,7 @@ export const projects: Project[] = [
     screenshot: "/images/thinker.webp",
     alt: "Dashboard com navbar e opções de geração.",
     repositoryUrl: "https://github.com/davi-andrade-js/Thinker-AI",
-    liveUrl: "https://thinker-pmm0suqah-davis-projects-820de78a.vercel.app/",
+    liveUrl: "https://thinker-ai.vercel.app/",
     technologies: [
       "TypeScript",
       "React",
