@@ -33,7 +33,7 @@ export default function Info() {
         <div className="font-poppinsRegular z-10 flex h-fit flex-col items-end justify-end space-y-4 text-base md:w-72 md:space-y-6">
           {skills.map((skill) => (
             <div key={skill.name} className="space-y-2 transition-all">
-              <h3 className="font-poppinsMedium text-end text-lg transition-all">
+              <h3 className="font-poppinsMedium cursor-default text-end text-lg transition-all">
                 {skill.name}
               </h3>
 
