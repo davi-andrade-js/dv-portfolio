@@ -5,21 +5,21 @@
 /* TODO: turn into talwind */
 
 @font-face {
-  font-family: "Poppins Regular";
-  src: url("/fonts/Poppins-Regular.ttf");
+  font-family: 'Poppins Regular';
+  src: url('/fonts/Poppins-Regular.ttf');
 }
 
 @font-face {
-  font-family: "Poppins Medium";
-  src: url("/fonts/Poppins-Medium.ttf");
+  font-family: 'Poppins Medium';
+  src: url('/fonts/Poppins-Medium.ttf');
 }
 
 .font-poppinsRegular {
-  font-family: "Poppins Regular";
+  font-family: 'Poppins Regular';
 }
 
 .font-poppinsMedium {
-  font-family: "Poppins Medium";
+  font-family: 'Poppins Medium';
 }
 
 @layer base {
@@ -35,8 +35,10 @@
     --secondary: rgb(211, 206, 201);
     --secondary-foreground: 210 40% 98%;
 
-    --light-one-bg: rgba(138, 17, 203, 0.9);
-    --light-two-bg: rgba(29, 108, 255, 0.9);
+    --light-one-bg: rgba(138, 17, 203, 0.5);
+    --light-two-bg: rgba(29, 108, 255, 0.5);
+
+    --pulse-opacity: 0.3;
 
     --badge-background: rgba(241, 247, 237);
     --badge-text: rgb(4, 13, 34);
@@ -61,8 +63,10 @@
     --secondary: rgb(68 64 60);
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --light-one-bg: rgb(109, 14, 170);
-    --light-two-bg: rgba(0, 70, 201, 1);
+    --light-one-bg: rgba(109, 14, 170, 0.7);
+    --light-two-bg: rgba(0, 70, 201, 0.7);
+
+    --pulse-opacity: 0.5;
 
     --badge-background: rgba(4, 13, 34);
     --badge-text: rgb(241, 255, 245);
@@ -97,14 +101,6 @@
 
   .text-balance {
     text-wrap: balance;
-  }
-
-  .light-one {
-    background-color: var(--light-one-bg);
-  }
-
-  .light-two {
-    background-color: var(--light-two-bg);
   }
 
   /* .nav {
@@ -142,13 +138,7 @@ body {
 }
 
 .text-glow {
-  background: linear-gradient(
-    to left,
-    #000000 20%,
-    #ffffff 30%,
-    #ffffff 70%,
-    #000000 80%
-  );
+  background: linear-gradient(to left, #000000 20%, #ffffff 30%, #ffffff 70%, #000000 80%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -222,18 +212,28 @@ body {
   }
 }
 
+.light-one {
+  background-color: var(--light-one-bg);
+}
+
+.light-two {
+  background-color: var(--light-two-bg);
+}
+
 .bg-shape1 {
-  animation: one 8s infinite linear;
+  animation: one 8s forwards linear;
 }
 
 .bg-shape2 {
-  animation: two 15s infinite linear;
+  animation: two 8s forwards linear;
 }
 
 @keyframes one {
   0% {
     left: -20vw;
     top: -45vh;
+    width: 600px;
+    height: 600px;
   }
   10% {
     left: -20vw;
@@ -260,106 +260,81 @@ body {
     top: -45vh;
   }
   70% {
-    left: 0px;
+    left: 10px;
     top: 35vh;
   }
   80% {
-    left: 45vw;
+    left: 20vw;
     top: 35vh;
   }
   90% {
     left: 20vw;
-    top: -20vh;
+    top: 35vh;
+    width: 800px;
+    height: 800px;
   }
   100% {
-    left: -20vw;
-    top: -45vh;
+    width: 1200px;
+    height: 1200px;
+
+    opacity: var(--pulse-opacity);
   }
 }
 
 @keyframes two {
   0% {
-    left: 65vw;
-    top: -45vh;
-  }
-  5% {
-    left: 65vw;
-    top: 35vh;
-  }
-  10% {
     left: 30vw;
     top: 35vh;
+    width: 600px;
+    height: 600px;
   }
-  15% {
+  20% {
     left: -10vw;
     top: 35vh;
   }
-  20% {
+  30% {
     left: -20vw;
     top: -45vh;
   }
-  25% {
-    left: 10vw;
-    top: -45vh;
-  }
-  30% {
-    left: 40vw;
-    top: 0vh;
-  }
-  35% {
-    left: 65vw;
-    top: 35vh;
-  }
   40% {
-    left: 65vw;
-    top: -45vh;
-  }
-  45% {
-    left: 40vw;
+    left: 10vw;
     top: -45vh;
   }
   50% {
-    left: 10vw;
-    top: -45vh;
-  }
-  55% {
-    left: -20vw;
-    top: -45vh;
+    left: 40vw;
+    top: 0vh;
   }
   60% {
-    left: -20vw;
-    top: 35vh;
-  }
-  65% {
-    left: 10vw;
+    left: 65vw;
     top: 35vh;
   }
   70% {
-    left: 40vw;
-    top: 35vh;
-  }
-  75% {
-    left: 65vw;
-    top: 35vh;
-  }
-  80% {
     left: 65vw;
     top: -45vh;
   }
-  85% {
-    left: 30vw;
+  80% {
+    left: 40vw;
     top: -45vh;
   }
   90% {
-    left: 55vw;
-    top: -0vh;
-  }
-  95% {
-    left: 65vw;
+    left: 20vw;
     top: 35vh;
+    width: 800px;
+    height: 800px;
   }
   100% {
-    left: 65vw;
-    top: -45vh;
+    width: 1200px;
+    height: 1200px;
+
+    opacity: var(--pulse-opacity);
   }
 }
+
+/* @keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+} */
