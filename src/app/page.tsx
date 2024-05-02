@@ -1,5 +1,5 @@
-import React from "react";
-import DownloadResumeBtn from "@/components/DownloadResumeBtn";
+import React from 'react';
+import DownloadResumeBtn from '@/components/DownloadResumeBtn';
 
 export default function Home() {
   return (

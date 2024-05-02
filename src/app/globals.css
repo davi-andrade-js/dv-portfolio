@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* TODO: turn into talwind */
-
 @font-face {
   font-family: 'Poppins Regular';
   src: url('/fonts/Poppins-Regular.ttf');
@@ -42,7 +40,7 @@
 
     --badge-background: rgba(241, 247, 237);
     --badge-text: rgb(4, 13, 34);
-    --card-background: rgba(8, 19, 55, 0.5);
+    /* --card-background: rgba(8, 19, 55, 0.5); */
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
@@ -63,14 +61,14 @@
     --secondary: rgb(68 64 60);
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --light-one-bg: rgba(109, 14, 170, 0.7);
-    --light-two-bg: rgba(0, 70, 201, 0.7);
+    --light-one-bg: rgba(138, 17, 203, 0.7);
+    --light-two-bg: rgba(29, 108, 255, 0.7);
 
-    --pulse-opacity: 0.5;
+    --pulse-opacity: 0.6;
 
     --badge-background: rgba(4, 13, 34);
     --badge-text: rgb(241, 255, 245);
-    --card-background: rgba(68, 68, 68, 0.5);
+    --card-background: rgba(216, 216, 216, 0.3);
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
@@ -92,11 +90,13 @@
   .card {
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background-color: var(--card-background);
   }
 
   .card-none {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    background-color: transparent;
   }
 
   .text-balance {
@@ -120,7 +120,11 @@ body {
   transition: background-color 0.15s;
 }
 
-@keyframes buttonBackground {
+.animate-bg {
+  animation: animateBackground 0.5s ease forwards;
+}
+
+@keyframes animateBackground {
   from {
     background-color: var(--card-background);
   }
@@ -129,25 +133,27 @@ body {
   }
 }
 
-.animate-bg {
-  animation: buttonBackground 0.5s ease forwards;
-}
-
 .animate-bg.active {
   animation-play-state: running;
 }
 
 .text-glow {
-  background: linear-gradient(to left, #000000 20%, #ffffff 30%, #ffffff 70%, #000000 80%);
+  background: linear-gradient(
+    to left,
+    #000000 20%,
+    #ffffff 30%,
+    #ffffff 70%,
+    #000000 80%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-emphasis-color: transparent;
   background-size: 500% auto;
-  animation: textShine 1400ms ease-in-out infinite alternate;
+  animation: glow 1400ms ease-in-out infinite alternate;
 }
 
-@keyframes textShine {
+@keyframes glow {
   0% {
     background-position: 100% 50%;
   }
@@ -156,12 +162,12 @@ body {
   }
 }
 
-.badge-text {
-  color: var(--badge-text);
-}
-
 .title-color {
   color: var(--title-color);
+}
+
+.badge-text {
+  color: var(--badge-text);
 }
 
 .badge {
@@ -173,17 +179,17 @@ body {
   color: var(--secondary);
 }
 
-.motion-area {
-  overflow: hidden;
-  position: absolute;
-  inset: 0;
-  justify-content: center;
-  display: inline-flex;
-  flex-direction: row;
+.fadeIn {
+  animation: fadeIn 0.75s;
 }
 
-.bg-blur {
-  filter: blur(90px);
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* .noise::before {
@@ -199,17 +205,17 @@ body {
   background: url(/images/noise.gif);
 } */
 
-.fadeIn {
-  animation: fadeIn 0.75s;
+.motion-area {
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  justify-content: center;
+  display: inline-flex;
+  flex-direction: row;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.bg-blur {
+  filter: blur(90px);
 }
 
 .light-one {
@@ -230,41 +236,41 @@ body {
 
 @keyframes one {
   0% {
-    left: -20vw;
+    left: 20vw;
     top: -45vh;
     width: 600px;
     height: 600px;
   }
   10% {
     left: -20vw;
-    top: 35vh;
+    top: -45vh;
   }
   20% {
-    left: 20vw;
+    left: -20vw;
     top: 35vh;
   }
   30% {
-    left: 65vw;
+    left: 20vw;
     top: 35vh;
   }
   40% {
     left: 65vw;
-    top: -45vh;
+    top: 35vh;
   }
   50% {
-    left: 35vw;
+    left: 65vw;
     top: -45vh;
   }
   60% {
-    left: -20vw;
+    left: 35vw;
     top: -45vh;
   }
   70% {
-    left: 10px;
-    top: 35vh;
+    left: -20vw;
+    top: -45vh;
   }
   80% {
-    left: 20vw;
+    left: 10px;
     top: 35vh;
   }
   90% {
@@ -329,12 +335,3 @@ body {
     opacity: var(--pulse-opacity);
   }
 }
-
-/* @keyframes pulse {
-  50% {
-    opacity: 0.5;
-  }
-}
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-} */

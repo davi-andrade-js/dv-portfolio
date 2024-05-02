@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import React, { useEffect } from "react";
-import ProjectsLink from "../../../components/ProjectsLink";
-import { Star } from "lucide-react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Badge } from "@/components/ui/badge";
-import { projects } from "../../../components/projects";
+import Image from 'next/image';
+import React, { useEffect } from 'react';
+import ProjectsLink from '../../../components/ProjectsLink';
+import { Star } from 'lucide-react';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Badge } from '@/components/ui/badge';
+import { projects } from '../../../components/projects';
 
 export default function ProjectsList() {
-  const [projectOnHover, setProjectOnHover] = React.useState("");
+  const [projectOnHover, setProjectOnHover] = React.useState('');
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function ProjectsList() {
               <div
                 key={project.name}
                 className={
-                  "badge m-2 w-full border-transparent md:my-5 md:border"
+                  'badge m-2 w-full border-transparent md:my-5 md:border'
                 }
               ></div>
             ) : (
@@ -30,7 +30,7 @@ export default function ProjectsList() {
             <div
               className="card md:card-none md:hover:card flex h-fit w-full cursor-default flex-col items-end space-x-5 space-y-3 rounded-xl p-4 transition-all md:w-[24rem] md:flex-row md:items-start md:space-y-0 md:p-2 lg:w-full"
               onMouseEnter={() => setProjectOnHover(project.name)}
-              onMouseLeave={() => setProjectOnHover("")}
+              onMouseLeave={() => setProjectOnHover('')}
             >
               <div className=" flex w-full flex-col items-end justify-between space-y-2 md:w-[90%] md:space-y-4">
                 <div className="flex w-full flex-col items-end transition-all">
