@@ -36,7 +36,7 @@ export default function Sidebar() {
         <Link
           key={item.name}
           href={item.href}
-          className={`nav z-10 w-fit cursor-pointer transition-all lg:hover:pl-2 ${route === item.href ? "underline" : ""}`}
+          className={`nav z-10 w-fit cursor-pointer transition-all lg:hover:text-neutral-500 ${route === item.href ? "text-neutral-500" : ""}`}
         >
           <p>{item.name}</p>
         </Link>
